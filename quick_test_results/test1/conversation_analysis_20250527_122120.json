@@ -1,0 +1,41 @@
+[
+  {
+    "recording_id": "c1ab80c89e7a5c2cb2df4c681e2e195i",
+    "duration": 8.22,
+    "conversation_detected": false,
+    "conversation_confidence": 0.6298855706758631,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 5.281874999999999,
+    "receiver_speech_duration": 0.32062500000000016,
+    "turn_switches": 1,
+    "conversation_flow_score": 1.0,
+    "snr_db": 100.86579132080078
+  },
+  {
+    "recording_id": "1d60c34a5c4fc9da6cc768f4b770195e",
+    "duration": 11.8,
+    "conversation_detected": true,
+    "conversation_confidence": 0.7423574013451498,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0.421875,
+    "receiver_speech_duration": 1.1137500000000002,
+    "turn_switches": 1,
+    "conversation_flow_score": 0.5,
+    "snr_db": 94.58375549316406
+  },
+  {
+    "recording_id": "63c9c548c1b11c1be802d4219f91195e",
+    "duration": 2.75975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.19137945698711098,
+    "caller_has_speech": true,
+    "receiver_has_speech": false,
+    "caller_speech_duration": 1.65375,
+    "receiver_speech_duration": 0,
+    "turn_switches": 0,
+    "conversation_flow_score": 0.0,
+    "snr_db": 90.46581268310547
+  }
+]

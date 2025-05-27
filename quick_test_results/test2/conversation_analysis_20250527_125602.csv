@@ -1,0 +1,3 @@
+recording_id,duration,conversation_detected,conversation_confidence,caller_has_speech,receiver_has_speech,caller_speech_duration,receiver_speech_duration,turn_switches,snr_db
+c1ab80c89e7a5c2cb2df4c681e2e195i,8.22,False,0.604470802919708,True,True,5.281874999999999,0.32062500000000016,1,103.87610626220703
+1d60c34a5c4fc9da6cc768f4b770195e,11.8,False,0.23904131355932204,True,True,0.421875,1.1137500000000002,1,97.59512329101562

@@ -1,0 +1,4 @@
+recording_id,duration,conversation_detected,conversation_confidence,caller_has_speech,receiver_has_speech,caller_speech_duration,receiver_speech_duration,turn_switches,conversation_flow_score,snr_db
+c1ab80c89e7a5c2cb2df4c681e2e195i,8.22,False,0.6298855706758631,True,True,5.281874999999999,0.32062500000000016,1,1.0,100.86579132080078
+1d60c34a5c4fc9da6cc768f4b770195e,11.8,True,0.7423574013451498,True,True,0.421875,1.1137500000000002,1,0.5,94.58375549316406
+63c9c548c1b11c1be802d4219f91195e,2.75975,False,0.19137945698711098,True,False,1.65375,0.0,0,0.0,90.46581268310547

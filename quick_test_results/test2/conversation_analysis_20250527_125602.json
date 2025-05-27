@@ -1,0 +1,26 @@
+[
+  {
+    "recording_id": "c1ab80c89e7a5c2cb2df4c681e2e195i",
+    "duration": 8.22,
+    "conversation_detected": false,
+    "conversation_confidence": 0.604470802919708,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 5.281874999999999,
+    "receiver_speech_duration": 0.32062500000000016,
+    "turn_switches": 1,
+    "snr_db": 103.87610626220703
+  },
+  {
+    "recording_id": "1d60c34a5c4fc9da6cc768f4b770195e",
+    "duration": 11.8,
+    "conversation_detected": false,
+    "conversation_confidence": 0.23904131355932204,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0.421875,
+    "receiver_speech_duration": 1.1137500000000002,
+    "turn_switches": 1,
+    "snr_db": 97.59512329101562
+  }
+]

@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass
 from typing import Optional
-
+import os
 
 @dataclass
 class ConversationDetectionConfig:
@@ -61,7 +61,7 @@ class ConversationDetectionConfig:
     max_workers: int = 4
 
     # Hugging Face token for pyannote models
-    huggingface_token: Optional[str] = "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"
+    huggingface_token: Optional[str] = os.getenv("HUGGINGFACE_TOKEN")
 
 
 # Default configuration instance
