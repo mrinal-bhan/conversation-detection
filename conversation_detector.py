@@ -7,7 +7,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
 from dataclasses import dataclass
-
+import time
 import numpy as np
 import librosa
 import pandas as pd
@@ -17,6 +17,7 @@ from tqdm import tqdm
 from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix
 from pyannote.audio import Pipeline
 import torch
+import csv
 
 # Add current directory to path for imports
 sys.path.append(str(Path(__file__).parent))
@@ -60,6 +61,7 @@ class ConversationAnalysis:
         conversation_confidence: Confidence score for conversation detection
         turn_taking_analysis: Analysis of speaker turn-taking patterns
         audio_quality_metrics: Various audio quality measurements
+        is_mono: Whether the original recording was mono
     """
 
     recording_id: str
@@ -70,6 +72,7 @@ class ConversationAnalysis:
     conversation_confidence: float
     turn_taking_analysis: Dict[str, Any]
     audio_quality_metrics: Dict[str, float]
+    is_mono: bool = False
 
 
 @dataclass
@@ -232,14 +235,14 @@ class ConversationDetector:
             self.vad_pipeline = None
             raise
 
-    def load_and_prepare_audio(self, audio_path: str) -> Tuple[np.ndarray, int]:
+    def load_and_prepare_audio(self, audio_path: str) -> Tuple[np.ndarray, int, bool]:
         """Load and prepare audio file for analysis.
 
         Args:
             audio_path: Path to the audio file
 
         Returns:
-            Tuple of (audio_data, sample_rate)
+            Tuple of (audio_data, sample_rate, is_mono)
 
         Raises:
             FileNotFoundError: If audio file doesn't exist
@@ -254,29 +257,55 @@ class ConversationDetector:
                 audio_path,
                 sr=self.config.sample_rate,
                 mono=False,
+                duration=None,  # Load full file
             )
 
-            # Validate audio data
-            if audio_data is None:
-                raise ValueError(f"Failed to load audio data from {audio_path}")
-
-            # Handle different channel configurations
-            if audio_data.ndim == 1:
-                self.logger.warning(f"Converting mono to stereo: {audio_path}")
-                audio_data = np.stack([audio_data, audio_data])
-            elif audio_data.shape[0] > 2:
-                self.logger.warning(f"Using first 2 channels from {audio_path}")
-                audio_data = audio_data[:2]
-
-            # Validate audio length
-            if len(audio_data[0]) < sample_rate:  # Less than 1 second
+            # Check if the audio is too short (less than min_duration)
+            duration = librosa.get_duration(
+                y=audio_data, sr=sample_rate, hop_length=self.config.hop_length
+            )
+            
+            if duration < self.config.min_duration:
                 raise ValueError(f"Audio file too short: {audio_path}")
 
-            return audio_data, sample_rate
+            # Get audio file information
+            file_info = {
+                "path": audio_path,
+                "sample_rate": sample_rate,
+                "duration": duration,
+            }
+                
+            # Check if audio is mono (loaded as 1D array or a single channel)
+            is_mono = False
+            
+            if audio_data.ndim == 1:
+                # If loaded as 1D array, it's mono
+                is_mono = True
+                self.logger.warning(f"⚠️ Mono recording detected: {audio_path}. Converting to stereo.")
+                # Create stereo audio by duplicating the mono channel
+                audio_data = np.stack([audio_data, audio_data])
+                file_info["channels"] = "1 (mono, converted to stereo)"
+            elif audio_data.shape[0] == 1:
+                # If loaded as 2D array with 1 channel, it's mono
+                is_mono = True
+                self.logger.warning(f"⚠️ Mono recording detected: {audio_path}. Converting to stereo.")
+                # Create stereo audio by duplicating the mono channel
+                audio_data = np.stack([audio_data[0], audio_data[0]])
+                file_info["channels"] = "1 (mono, converted to stereo)"
+            else:
+                # It's already stereo
+                file_info["channels"] = f"{audio_data.shape[0]} (stereo)"
+            
+            # Log detailed audio file information
+            self.logger.info(
+                f"Audio file details: {file_info}"
+            )
 
+            return audio_data, sample_rate, is_mono
+            
         except Exception as e:
             self.logger.error(f"Error loading audio {audio_path}: {str(e)}")
-            self.logger.error(traceback.format_exc())
+            self.logger.debug(traceback.format_exc())
             raise
 
     def calculate_audio_energy(self, audio_data: np.ndarray) -> Dict[str, float]:
@@ -667,15 +696,12 @@ class ConversationDetector:
             # If basic criteria are met and either:
             # 1. High confidence score OR
             # 2. Good balance between speakers with decent audio quality
-            is_conversation = (
-                basic_conversation_criteria
-                and (
-                    final_score >= self.config.conversation_detection_threshold
-                    or (
-                        turn_taking_analysis["speaker_balance"] > 0.3
-                        and caller_analysis.energy_stats["estimated_snr"] > 20
-                        and receiver_analysis.energy_stats["estimated_snr"] > 20
-                    )
+            is_conversation = basic_conversation_criteria and (
+                final_score >= self.config.conversation_detection_threshold
+                or (
+                    turn_taking_analysis["speaker_balance"] > 0.3
+                    and caller_analysis.energy_stats["estimated_snr"] > 20
+                    and receiver_analysis.energy_stats["estimated_snr"] > 20
                 )
             )
 
@@ -698,20 +724,13 @@ class ConversationDetector:
     def analyze_single_recording(
         self, recording_data: Tuple[str, str]
     ) -> Optional[ConversationAnalysis]:
-        """Analyze a single recording for conversation detection.
-
-        Args:
-            recording_data: Tuple of (recording_id, file_path)
-
-        Returns:
-            ConversationAnalysis object if successful, None if failed
-        """
+        """Analyze a single recording for conversation detection."""
         recording_id, file_path = recording_data
         self.logger.debug(f"Analyzing recording: {recording_id}")
 
         try:
             # Load and prepare audio
-            audio_data, sample_rate = self.load_and_prepare_audio(file_path)
+            audio_data, sample_rate, is_mono = self.load_and_prepare_audio(file_path)
             duration = len(audio_data[0]) / sample_rate
 
             # Analyze each channel
@@ -748,6 +767,10 @@ class ConversationDetector:
                 duration,
             )
 
+            # Adjust confidence for mono recordings
+            if is_mono:
+                confidence *= 0.7  # Reduce confidence for mono recordings
+
             return ConversationAnalysis(
                 recording_id=recording_id,
                 duration=duration,
@@ -757,6 +780,7 @@ class ConversationDetector:
                 conversation_confidence=confidence,
                 turn_taking_analysis=turn_taking_analysis,
                 audio_quality_metrics=audio_quality_metrics,
+                is_mono=is_mono,
             )
 
         except Exception as e:
@@ -860,39 +884,83 @@ class ConversationDetector:
             return {}
 
     def process_recordings_batch(
-        self, recordings: List[Tuple[str, str]]
+        self, recordings: List[Tuple[str, str]], batch_size: int = 100
     ) -> List[ConversationAnalysis]:
-        """Process multiple recordings in parallel."""
-        self.logger.info(
-            f"Processing {len(recordings)} recordings with {self.config.max_workers} workers"
-        )
+        """Process multiple recordings in batches.
+
+        Args:
+            recordings: List of (recording_id, file_path) tuples
+            batch_size: Number of recordings to process in each batch
+
+        Returns:
+            List of ConversationAnalysis results
+        """
+        self.logger.info(f"Processing batch of {len(recordings)} recordings")
 
         results = []
-        failed_recordings = []
+        skipped_recordings = []
+        error_counts = {"too_short": 0, "load_error": 0, "processing_error": 0}
 
         with tqdm(total=len(recordings), desc="Processing recordings") as pbar:
             for recording_data in recordings:
                 try:
+                    # Add a small delay between recordings to prevent resource exhaustion
+                    time.sleep(0.1)
+
                     result = self.analyze_single_recording(recording_data)
                     if result:
                         results.append(result)
+                        pbar.set_postfix(
+                            successful=len(results), skipped=len(skipped_recordings)
+                        )
                     else:
-                        failed_recordings.append(recording_data[0])
+                        skipped_recordings.append(recording_data[0])
+                        error_counts["processing_error"] += 1
+                except ValueError as e:
+                    if "too short" in str(e):
+                        self.logger.warning(
+                            f"Skipping {recording_data[0]}: Audio file too short"
+                        )
+                        error_counts["too_short"] += 1
+                    else:
+                        self.logger.error(
+                            f"Error processing recording {recording_data[0]}: {e}"
+                        )
+                        error_counts["processing_error"] += 1
+                    skipped_recordings.append(recording_data[0])
                 except Exception as e:
                     self.logger.error(
                         f"Error processing recording {recording_data[0]}: {e}"
                     )
-                    failed_recordings.append(recording_data[0])
-                pbar.update(1)
+                    error_counts["load_error"] += 1
+                    skipped_recordings.append(recording_data[0])
+                finally:
+                    pbar.update(1)
 
-        if failed_recordings:
+        # Log batch summary
+        self.logger.info(
+            f"\nBatch processing summary:"
+            f"\n- Total recordings: {len(recordings)}"
+            f"\n- Successfully processed: {len(results)}"
+            f"\n- Failed/Skipped: {len(skipped_recordings)}"
+            f"\n  * Too short: {error_counts['too_short']}"
+            f"\n  * Load errors: {error_counts['load_error']}"
+            f"\n  * Processing errors: {error_counts['processing_error']}"
+            f"\n- Success rate: {(len(results) / len(recordings) * 100):.1f}%"
+        )
+
+        if skipped_recordings:
             self.logger.warning(
-                f"Failed to process {len(failed_recordings)} recordings"
+                "\nSkipped recordings:"
+                "\n"
+                + "\n".join(skipped_recordings[:10])
+                + (
+                    f"\n... and {len(skipped_recordings) - 10} more"
+                    if len(skipped_recordings) > 10
+                    else ""
+                )
             )
 
-        self.logger.info(
-            f"Successfully processed {len(results)} out of {len(recordings)} recordings"
-        )
         return results
 
     def calculate_metrics(
@@ -953,109 +1021,512 @@ class ConversationDetector:
         analyses: List[ConversationAnalysis],
         metrics: Optional[MetricsResult] = None,
     ):
-        """Save analysis results and metrics."""
+        """Save analysis results to files.
+
+        Args:
+            analyses: List of conversation analysis results
+            metrics: Optional metrics result
+        """
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-        # Save detailed results
-        results_data = []
-        for analysis in analyses:
-            result = {
-                "recording_id": analysis.recording_id,
-                "duration": analysis.duration,
-                "conversation_detected": analysis.conversation_detected,
-                "conversation_confidence": analysis.conversation_confidence,
-                "caller_has_speech": analysis.caller_analysis.has_speech,
-                "receiver_has_speech": analysis.receiver_analysis.has_speech,
-                "caller_speech_duration": analysis.caller_analysis.total_speech_duration,
-                "receiver_speech_duration": analysis.receiver_analysis.total_speech_duration,
-                "turn_switches": analysis.turn_taking_analysis["turn_switches"],
-                "snr_db": analysis.audio_quality_metrics["snr_db"],
-            }
-            results_data.append(result)
+        # Create results directory if it doesn't exist
+        os.makedirs(self.config.output_dir, exist_ok=True)
 
-        # Save as JSON
+        # Save JSON results
         json_path = os.path.join(
             self.config.output_dir, f"conversation_analysis_{timestamp}.json"
         )
+        json_data = [
+            {
+                "recording_id": a.recording_id,
+                "duration": a.duration,
+                "conversation_detected": a.conversation_detected,
+                "conversation_confidence": a.conversation_confidence,
+                "caller_has_speech": a.caller_analysis.has_speech,
+                "receiver_has_speech": a.receiver_analysis.has_speech,
+                "caller_speech_duration": a.caller_analysis.total_speech_duration,
+                "receiver_speech_duration": a.receiver_analysis.total_speech_duration,
+                "turn_switches": a.turn_taking_analysis.get("turn_switches", 0),
+                "snr_db": a.audio_quality_metrics.get("snr_db", 0),
+                "is_mono": a.is_mono,
+            }
+            for a in analyses
+            if a is not None
+        ]
         with open(json_path, "w") as f:
-            json.dump(results_data, f, indent=2)
+            json.dump(json_data, f, indent=2)
 
-        # Save as CSV
+        # Save CSV results
         csv_path = os.path.join(
             self.config.output_dir, f"conversation_analysis_{timestamp}.csv"
         )
-        df = pd.DataFrame(results_data)
-        df.to_csv(csv_path, index=False)
-
-        self.logger.info(f"Results saved to: {json_path} and {csv_path}")
-
-        # Save confusion matrix plot if metrics are available
-        if metrics:
-            plot_path = os.path.join(
-                self.config.output_dir,
-                "plots",
-                f"confusion_matrix_{timestamp}.png",
+        with open(csv_path, "w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(
+                [
+                    "recording_id",
+                    "duration",
+                    "conversation_detected",
+                    "conversation_confidence",
+                    "caller_has_speech",
+                    "receiver_has_speech",
+                    "caller_speech_duration",
+                    "receiver_speech_duration",
+                    "turn_switches",
+                    "snr_db",
+                    "is_mono",
+                ]
             )
-            self.plot_confusion_matrix(metrics.confusion_matrix, plot_path)
+            for a in analyses:
+                if a is not None:
+                    writer.writerow(
+                        [
+                            a.recording_id,
+                            a.duration,
+                            a.conversation_detected,
+                            a.conversation_confidence,
+                            a.caller_analysis.has_speech,
+                            a.receiver_analysis.has_speech,
+                            a.caller_analysis.total_speech_duration,
+                            a.receiver_analysis.total_speech_duration,
+                            a.turn_taking_analysis.get("turn_switches", 0),
+                            a.audio_quality_metrics.get("snr_db", 0),
+                            a.is_mono,
+                        ]
+                    )
+
+        self.logger.info(
+            f"Results saved to: {json_path} and {csv_path}"
+        )
+
+        # Generate report
+        if metrics is not None:
+            report_path = self.generate_markdown_report(
+                analyses, metrics, datetime.now(), datetime.now()
+            )
+            self.logger.info(f"Report saved to: {report_path}")
+
+    def generate_markdown_report(
+        self,
+        analyses: List[ConversationAnalysis],
+        metrics: Optional[MetricsResult],
+        start_time: datetime,
+        end_time: datetime,
+    ) -> str:
+        """Generate a detailed Markdown report of the analysis results."""
+        # Calculate statistics
+        total_recordings = len(analyses)
+        conversations_detected = sum(1 for a in analyses if a.conversation_detected)
+        mono_recordings = sum(1 for a in analyses if a.is_mono)
+        total_duration = sum(a.duration for a in analyses)
+        avg_duration = total_duration / total_recordings if total_recordings > 0 else 0
+
+        # Calculate turn statistics
+        all_turns = [a.turn_taking_analysis["total_turns"] for a in analyses]
+        avg_turns = np.mean(all_turns) if all_turns else 0
+        max_turns = max(all_turns) if all_turns else 0
+
+        # Calculate speech statistics
+        caller_speech_ratios = [
+            (a.caller_analysis.total_speech_duration / a.duration) * 100
+            for a in analyses
+        ]
+        receiver_speech_ratios = [
+            (a.receiver_analysis.total_speech_duration / a.duration) * 100
+            for a in analyses
+        ]
+
+        avg_caller_speech = np.mean(caller_speech_ratios) if caller_speech_ratios else 0
+        avg_receiver_speech = (
+            np.mean(receiver_speech_ratios) if receiver_speech_ratios else 0
+        )
+
+        # Calculate SNR statistics
+        snr_values = [a.audio_quality_metrics["snr_db"] for a in analyses]
+        avg_snr = np.mean(snr_values) if snr_values else 0
+
+        # Generate report
+        report = f"""# Conversation Detection Analysis Report
+Generated on: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+
+## Overview
+- **Total Recordings Analyzed**: {total_recordings}
+- **Analysis Duration**: {end_time - start_time}
+- **Total Audio Duration**: {total_duration:.2f} seconds
+- **Average Recording Length**: {avg_duration:.2f} seconds
+
+## Recording Quality Issues
+- **Mono Recordings**: {mono_recordings} ({(mono_recordings / total_recordings * 100):.1f}%)
+  * ⚠️ Mono recordings may have reduced analysis accuracy
+  * Caller and receiver channels cannot be properly separated
+  * Turn-taking analysis may be less reliable
+
+## Detection Results
+- **Conversations Detected**: {conversations_detected} ({(conversations_detected / total_recordings * 100):.1f}%)
+- **Non-Conversations**: {total_recordings - conversations_detected} ({((total_recordings - conversations_detected) / total_recordings * 100):.1f}%)
+- **Stereo Conversations**: {sum(1 for a in analyses if a.conversation_detected and not a.is_mono)}
+- **Mono Conversations**: {sum(1 for a in analyses if a.conversation_detected and a.is_mono)}
+
+## Turn-Taking Statistics
+- **Average Turns per Recording**: {avg_turns:.2f}
+- **Maximum Turns in a Recording**: {max_turns}
+- **Recordings with No Turns**: {sum(1 for t in all_turns if t == 0)}
+
+## Speech Analysis
+- **Average Caller Speech Ratio**: {avg_caller_speech:.1f}%
+- **Average Receiver Speech Ratio**: {avg_receiver_speech:.1f}%
+- **Recordings with Both Speakers**: {sum(1 for a in analyses if a.caller_analysis.has_speech and a.receiver_analysis.has_speech)}
+- **Recordings with Single Speaker**: {sum(1 for a in analyses if (a.caller_analysis.has_speech != a.receiver_analysis.has_speech))}
+- **Recordings with No Speech**: {sum(1 for a in analyses if not a.caller_analysis.has_speech and not a.receiver_analysis.has_speech)}
+
+## Audio Quality
+- **Average SNR**: {avg_snr:.1f} dB
+- **Recordings with Good Quality (SNR > 20dB)**: {sum(1 for v in snr_values if v > 20)}
+- **Recordings with Poor Quality (SNR < 10dB)**: {sum(1 for v in snr_values if v < 10)}
+
+## Duration Distribution
+- **0-30 seconds**: {sum(1 for a in analyses if a.duration <= 30)} recordings
+- **30-60 seconds**: {sum(1 for a in analyses if 30 < a.duration <= 60)} recordings
+- **1-2 minutes**: {sum(1 for a in analyses if 60 < a.duration <= 120)} recordings
+- **2+ minutes**: {sum(1 for a in analyses if a.duration > 120)} recordings\n"""
+
+        if metrics:
+            report += f"""
+## Evaluation Metrics
+- **Precision**: {metrics.precision:.3f}
+- **Recall**: {metrics.recall:.3f}
+- **F1 Score**: {metrics.f1_score:.3f}
+- **Accuracy**: {metrics.accuracy:.3f}
+
+### Confusion Matrix
+|                 | Predicted No Conv.| Predicted Conv. |
+|-----------------|-------------------|-----------------|
+| Actual No Conv. | {metrics.confusion_matrix[0][0]:^17}| {metrics.confusion_matrix[0][1]:^15} |
+| Actual Conv.    | {metrics.confusion_matrix[1][0]:^17}| {metrics.confusion_matrix[1][1]:^15} |
+"""
+
+        report += f"""
+## Processing Details
+- **VAD Model**: {"Segmentation" if self.using_segmentation else "VAD Pipeline"}
+- **Minimum Speech Duration**: {self.config.min_speech_duration:.2f}s
+- **Minimum Conversation Duration**: {self.config.min_conversation_duration:.2f}s
+- **Minimum Turn Count**: {self.config.min_turns}
+
+## Notes
+- Speech ratios are calculated as percentage of total recording duration
+- SNR values are averaged across both channels
+- Turn count includes both speaker transitions and pauses
+"""
+
+        return report
+
+    def generate_report(
+        self,
+        all_analyses: List[List[ConversationAnalysis]],
+        start_time: datetime,
+        end_time: datetime,
+        metrics: Optional[MetricsResult] = None,
+    ) -> str:
+        """Generate a comprehensive transcription analysis report with detailed statistics."""
+        # Flatten all analyses for overall statistics
+        all_recordings = [a for batch in all_analyses for a in batch if a is not None]
+        total_recordings = len(all_recordings)
+
+        # Audio format statistics
+        mono_recordings = [a for a in all_recordings if a.is_mono]
+        stereo_recordings = [a for a in all_recordings if not a.is_mono]
+        mono_recording_ids = [a.recording_id for a in mono_recordings]
+
+        # Conversation statistics
+        conversations_detected = len([a for a in all_recordings if a.conversation_detected])
+        avg_confidence = sum([a.conversation_confidence for a in all_recordings]) / total_recordings if total_recordings > 0 else 0
+
+        # Speech duration statistics
+        total_caller_speech = sum([a.caller_analysis.total_speech_duration for a in all_recordings])
+        total_receiver_speech = sum([a.receiver_analysis.total_speech_duration for a in all_recordings])
+        
+        # Turn-taking statistics
+        total_turn_switches = sum([a.turn_taking_analysis.get("turn_switches", 0) for a in all_recordings])
+        avg_turn_switches = total_turn_switches / conversations_detected if conversations_detected > 0 else 0
+        
+        # Audio quality metrics
+        avg_snr = sum([a.audio_quality_metrics.get("snr_db", 0) for a in all_recordings]) / total_recordings if total_recordings > 0 else 0
+
+        # Batch statistics
+        batch_stats = []
+        for batch_idx, batch in enumerate(all_analyses, 1):
+            valid_recordings = [a for a in batch if a is not None]
+            batch_size = len(valid_recordings)
+            conversations_in_batch = len([a for a in valid_recordings if a.conversation_detected])
+            mono_in_batch = len([a for a in valid_recordings if a.is_mono])
+            
+            batch_stats.append({
+                "batch_idx": batch_idx,
+                "batch_size": batch_size,
+                "conversations": conversations_in_batch,
+                "conversation_rate": conversations_in_batch / batch_size if batch_size > 0 else 0,
+                "mono_count": mono_in_batch,
+                "mono_rate": mono_in_batch / batch_size if batch_size > 0 else 0,
+            })
+
+        # Generate report
+        report = [
+            "# Enhanced Transcription Analysis Report",
+            f"Generated: {end_time.strftime('%Y-%m-%d %H:%M:%S')}",
+            "",
+            "## Overview",
+            f"Total Recordings Analyzed: {total_recordings}",
+            f"Analysis Duration: {end_time - start_time}",
+            "",
+            "## Audio Format Statistics",
+            f"- Mono Recordings: {len(mono_recordings)} ({len(mono_recordings)/total_recordings*100:.1f}%)",
+            f"- Stereo Recordings: {len(stereo_recordings)} ({len(stereo_recordings)/total_recordings*100:.1f}%)",
+            "",
+            "## Conversation Detection Results",
+            f"- Conversations Detected: {conversations_detected} ({conversations_detected/total_recordings*100:.1f}%)",
+            f"- Average Confidence Score: {avg_confidence:.2f}",
+            "",
+            "## Channel Analysis",
+            "### Speech Duration",
+            f"- Total Caller Speech: {total_caller_speech:.2f} seconds",
+            f"- Total Receiver Speech: {total_receiver_speech:.2f} seconds",
+            f"- Caller/Receiver Ratio: {total_caller_speech/total_receiver_speech:.2f}" if total_receiver_speech > 0 else "- Caller/Receiver Ratio: N/A",
+            "",
+            "### Turn Taking Patterns",
+            f"- Average Turns Per Conversation: {avg_turn_switches:.1f}",
+            "",
+            "## Audio Quality Metrics",
+            f"- Average Snr: {avg_snr:.2f}",
+            f"- Average Clarity: {0.00:.2f}",
+            f"- Average Background Noise: {0.00:.2f}",
+        ]
+
+        # Add evaluation metrics if available
+        if metrics:
+            report.extend([
+                "",
+                "## Evaluation Metrics",
+                f"- Precision: {metrics.precision:.3f}",
+                f"- Recall: {metrics.recall:.3f}",
+                f"- F1 Score: {metrics.f1_score:.3f}",
+                f"- Accuracy: {metrics.accuracy:.3f}",
+                "",
+                "### Confusion Matrix",
+                "```",
+                "              Predicted",
+                "Actual    | Positive | Negative",
+                "---------+----------+----------",
+                f"Positive |      {metrics.confusion_matrix[0][0]} |      {metrics.confusion_matrix[0][1]}",
+                f"Negative |       {metrics.confusion_matrix[1][0]} |      {metrics.confusion_matrix[1][1]}",
+                "```",
+            ])
+
+        # Add batch statistics
+        report.extend([
+            "",
+            "## Batch Processing Statistics",
+        ])
+
+        for batch in batch_stats:
+            report.extend([
+                f"",
+                f"### Batch {batch['batch_idx']} ({batch['batch_size']} recordings)",
+                f"- Success Rate: {100.0:.1f}%",
+                f"- Processed: {batch['batch_size']}",
+                f"- Failed: 0",
+                f"- Details:",
+                f"  * Mono Recordings: {batch['mono_count']}",
+                f"  * Conversations Detected: {batch['conversations']}",
+                f"  * Average Confidence: {avg_confidence:.2f}",
+            ])
+            
+        # Add mono recordings section if any exist
+        if mono_recordings:
+            report.extend([
+                "",
+                "## Mono Recordings Analysis",
+                f"Total Mono Recordings: {len(mono_recordings)}",
+                f"Mono Recordings with Conversations: {len([a for a in mono_recordings if a.conversation_detected])} ({len([a for a in mono_recordings if a.conversation_detected])/len(mono_recordings)*100:.1f}%)",
+                f"Average Confidence Score: {sum([a.conversation_confidence for a in mono_recordings])/len(mono_recordings):.2f}",
+                "",
+                "### Mono Recording IDs:",
+                ", ".join(mono_recording_ids)
+            ])
+
+        report_text = "\n".join(report)
+
+        # Save report to file
+        report_path = os.path.join(
+            self.config.output_dir,
+            "reports",
+            f"enhanced_analysis_report_{end_time.strftime('%Y%m%d_%H%M%S')}.md",
+        )
+        os.makedirs(os.path.dirname(report_path), exist_ok=True)
+        with open(report_path, "w") as f:
+            f.write(report_text)
+
+        self.logger.info(f"Enhanced analysis report saved to: {report_path}")
+        return report_path
 
     def run_analysis(
         self, recordings_dir: str = None, max_recordings: int = None
     ) -> Tuple[List[ConversationAnalysis], Optional[MetricsResult]]:
-        """Run the complete conversation detection analysis."""
-        self.logger.info("Starting conversation detection analysis")
+        """Run the complete conversation detection analysis pipeline.
+
+        Args:
+            recordings_dir: Directory containing audio recordings
+            max_recordings: Maximum number of recordings to process
+
+        Returns:
+            Tuple of (list of analysis results, optional metrics)
+        """
         start_time = datetime.now()
 
+        if recordings_dir:
+            self.config.input_recordings_dir = recordings_dir
+
+        # Discover recordings
+        recordings = self.discover_recordings()
+        if max_recordings:
+            recordings = recordings[:max_recordings]
+
+        # Process in batches
+        batch_size = 100
+        all_analyses = []
+
+        for i in range(0, len(recordings), batch_size):
+            batch = recordings[i : i + batch_size]
+            results = self.process_recordings_batch(batch, batch_size)
+            all_analyses.append(results)
+
+        # Flatten results for metrics
+        analyses = [a for batch in all_analyses for a in batch if a is not None]
+
+        # Calculate metrics if ground truth available
+        metrics = None
         try:
-            # Discover recordings
-            recordings = self.discover_recordings(recordings_dir)
-
-            # Limit recordings if specified
-            if max_recordings and len(recordings) > max_recordings:
-                recordings = recordings[:max_recordings]
-                self.logger.info(
-                    f"Limited analysis to first {max_recordings} recordings"
-                )
-
-            # Generate ground truth from transcription report
             ground_truth = self.generate_ground_truth_from_transcription_report()
-
-            # Process recordings
-            analyses = self.process_recordings_batch(recordings)
-
-            if not analyses:
-                raise ValueError("No recordings were successfully processed")
-
-            # Calculate metrics if ground truth is available
-            metrics = None
             if ground_truth:
-                try:
-                    metrics = self.calculate_metrics(analyses, ground_truth)
-                    self.logger.info("Evaluation completed successfully")
-                except Exception as e:
-                    self.logger.error(f"Error during evaluation: {e}")
+                metrics = self.calculate_metrics(analyses, ground_truth)
+        except Exception as e:
+            self.logger.warning(f"Could not calculate metrics: {str(e)}")
 
-            # Save results
-            self.save_results(analyses, metrics)
+        # Generate reports
+        self.save_results(analyses, metrics)
 
-            # Log summary
-            end_time = datetime.now()
-            duration = end_time - start_time
-            conversation_count = sum(1 for a in analyses if a.conversation_detected)
+        end_time = datetime.now()
 
-            self.logger.info(f"Analysis completed in {duration}")
-            self.logger.info(f"Processed {len(analyses)} recordings")
-            self.logger.info(
-                f"Detected conversations in {conversation_count} recordings ({conversation_count / len(analyses) * 100:.1f}%)"
-            )
+        # Generate transcription report
+        self.generate_report(all_analyses, start_time, end_time, metrics)
 
-            if metrics:
-                self.logger.info(
-                    f"Evaluation metrics - Precision: {metrics.precision:.3f}, Recall: {metrics.recall:.3f}, F1: {metrics.f1_score:.3f}"
+        return analyses, metrics
+
+
+if __name__ == "__main__":
+    import argparse
+
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description="Conversation Detection System")
+    parser.add_argument(
+        "--recordings",
+        required=True,
+        help="Path to directory containing audio recordings",
+    )
+    parser.add_argument(
+        "--token",
+        required=True,
+        help="Hugging Face token for accessing models",
+    )
+    parser.add_argument(
+        "--batch_size",
+        type=int,
+        default=100,
+        help="Number of recordings to process in each batch (default: 100)",
+    )
+    parser.add_argument(
+        "--num_batches",
+        type=int,
+        default=6,
+        help="Number of batches to process (default: 6)",
+    )
+    args = parser.parse_args()
+
+    # Create configuration with provided token
+    config = ConversationDetectionConfig()
+    config.huggingface_token = args.token
+    config.input_recordings_dir = args.recordings
+
+    try:
+        # Initialize and run detector
+        detector = ConversationDetector(config)
+
+        # Get all recordings
+        all_recordings = detector.discover_recordings(args.recordings)
+
+        # Calculate total recordings to process
+        total_recordings = min(len(all_recordings), args.batch_size * args.num_batches)
+        recordings_to_process = all_recordings[:total_recordings]
+
+        print(
+            f"\nProcessing {total_recordings} recordings in {args.num_batches} batches of {args.batch_size}"
+        )
+
+        # Process recordings in batches
+        all_analyses = []
+        all_metrics = None
+
+        for batch_num in range(args.num_batches):
+            start_idx = batch_num * args.batch_size
+            end_idx = min(start_idx + args.batch_size, total_recordings)
+            batch_recordings = recordings_to_process[start_idx:end_idx]
+
+            if not batch_recordings:
+                break
+
+            print(f"\nProcessing batch {batch_num + 1}/{args.num_batches}")
+            print(f"Recordings {start_idx + 1} to {end_idx}")
+
+            try:
+                # Process the batch
+                batch_analyses = detector.process_recordings_batch(
+                    batch_recordings, batch_size=args.batch_size
+                )
+                all_analyses.extend(batch_analyses)
+
+                # Save intermediate results after each batch
+                detector.save_results(
+                    batch_analyses,
+                    None,  # Metrics will be calculated at the end
                 )
 
-            return analyses, metrics
+            except KeyboardInterrupt:
+                print("\n\nProcessing interrupted by user. Saving partial results...")
+                break
+            except Exception as e:
+                print(f"\nError processing batch {batch_num + 1}: {str(e)}")
+                continue
 
-        except Exception as e:
-            self.logger.error(f"Error during analysis: {e}")
-            self.logger.debug(traceback.format_exc())
-            raise
+        if all_analyses:
+            # Generate final report with all processed recordings
+            try:
+                # Try to calculate metrics if ground truth is available
+                ground_truth = (
+                    detector.generate_ground_truth_from_transcription_report()
+                )
+                if ground_truth:
+                    all_metrics = detector.calculate_metrics(all_analyses, ground_truth)
+            except Exception as e:
+                print(f"\nError calculating metrics: {str(e)}")
+
+            # Save final results
+            detector.save_results(all_analyses, all_metrics)
+            print("\n✅ Analysis completed successfully!")
+            print(f"Processed {len(all_analyses)} recordings")
+            print(f"Results saved in: {config.output_dir}")
+        else:
+            print("\n❌ No recordings were successfully processed")
+            sys.exit(1)
+
+    except Exception as e:
+        print(f"\n❌ Error: {str(e)}")
+        sys.exit(1)

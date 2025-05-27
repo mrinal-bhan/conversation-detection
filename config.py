@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from typing import Optional
 import os
 
+
 @dataclass
 class ConversationDetectionConfig:
     """Configuration for conversation detection analysis.
@@ -51,8 +52,8 @@ class ConversationDetectionConfig:
     receiver_channel: int = 1
 
     # File paths
-    input_recordings_dir: str = "../real-time-transcription/exotel_recordings"
-    output_dir: str = "results"
+    input_recordings_dir: str = "/Users/mrinal/myEqual/Azure/prod_recordings"
+    output_dir: str = "/Users/mrinal/myEqual/Azure/conversation-detection/results/prod"
     logs_dir: str = "logs"
     temp_dir: str = "temp"
 
