@@ -1,0 +1,3727 @@
+[
+  {
+    "recording_id": "1efcf617984f55b38bb855baaace195g",
+    "duration": 14.37975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0.2699999999999996,
+    "receiver_speech_duration": 1.2993749999999995,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": 0.23625000000000007,
+      "turn_rate": 0.25764895330112725,
+      "overlap_ratio": 0.060869565217391335,
+      "response_times": [
+        -0.23625000000000007
+      ],
+      "speaker_balance": 0.20779220779220756
+    },
+    "audio_quality": {
+      "snr_db": 78.49212646484375,
+      "spectral_centroid": 51.41077989838456,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "9d4b3983f5e3b5a6e108e7ee42fe195q",
+    "duration": 6.60475,
+    "conversation_detected": false,
+    "conversation_confidence": 0.6483674357740371,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 2.4806250000000007,
+    "receiver_speech_duration": 0.405,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": -0.10125000000000006,
+      "turn_rate": 0.33479807491106917,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        0.10125000000000006
+      ],
+      "speaker_balance": 0.16326530612244894
+    },
+    "audio_quality": {
+      "snr_db": 100.82666015625,
+      "spectral_centroid": 952.4710040198768,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.7096212450686774,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "b136d89192aa3405e930d49e0bc4195m",
+    "duration": 20.19975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 4.910625,
+    "receiver_speech_duration": 5.332499999999998,
+    "turn_taking": {
+      "total_turns": 9,
+      "turn_switches": 9,
+      "avg_turn_duration": -0.7800000000000005,
+      "turn_rate": 0.4861744150714068,
+      "overlap_ratio": 0.07383773928896972,
+      "response_times": [
+        1.231875,
+        -0.45562499999999995,
+        -0.6412499999999994,
+        0.5906249999999993,
+        1.1137500000000014,
+        0.911249999999999,
+        1.7043749999999989,
+        -0.35437499999999744,
+        2.9193750000000023
+      ],
+      "speaker_balance": 0.9208860759493674
+    },
+    "audio_quality": {
+      "snr_db": 104.66424560546875,
+      "spectral_centroid": 843.9090652125335,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.968354430379747,
+      "quality": 1.0,
+      "interaction": 0.6666666666666666
+    }
+  },
+  {
+    "recording_id": "662ff37a79d402b8b9cecf5bd72d195m",
+    "duration": 9.16,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0,
+    "receiver_speech_duration": 1.198125,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 88.48408508300781,
+      "spectral_centroid": 11.30385242862032,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "439577026d00f947173cfa2715fc195f",
+    "duration": 8.4,
+    "conversation_detected": false,
+    "conversation_confidence": 0.5919531250000011,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0.3374999999999986,
+    "receiver_speech_duration": 0.2531250000000007,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": -1.9406250000000007,
+      "turn_rate": 0.3950617283950617,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        1.9406250000000007
+      ],
+      "speaker_balance": 0.7500000000000052
+    },
+    "audio_quality": {
+      "snr_db": 87.83894348144531,
+      "spectral_centroid": 754.8285924109927,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.548437500000003,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "23a5708b12becefccac0934b538b195q",
+    "duration": 39.51975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.990389366515837,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 14.917500000000008,
+    "receiver_speech_duration": 7.340625000000008,
+    "turn_taking": {
+      "total_turns": 15,
+      "turn_switches": 15,
+      "avg_turn_duration": -0.4162499999999997,
+      "turn_rate": 0.404776361060514,
+      "overlap_ratio": 0.04826958105646632,
+      "response_times": [
+        -1.0631249999999999,
+        -0.40500000000000114,
+        0.6750000000000007,
+        1.4175000000000004,
+        0.6918749999999996,
+        -1.8056249999999991,
+        4.59,
+        -0.3881249999999987,
+        0.05062500000000014,
+        0.5062499999999979,
+        0.8100000000000023,
+        -0.40500000000000114,
+        1.2318749999999952,
+        -0.016874999999998863,
+        0.35437499999999744
+      ],
+      "speaker_balance": 0.4920814479638012
+    },
+    "audio_quality": {
+      "snr_db": 100.9611587524414,
+      "spectral_centroid": 1134.193797633711,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.7968325791855204,
+      "quality": 1.0,
+      "interaction": 0.5599999999999999
+    }
+  },
+  {
+    "recording_id": "4ee662f8454d1461e97fb8803372195n",
+    "duration": 11.59975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.860699062233589,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 6.598124999999998,
+    "receiver_speech_duration": 1.8056249999999998,
+    "turn_taking": {
+      "total_turns": 3,
+      "turn_switches": 3,
+      "avg_turn_duration": -0.0731250000000004,
+      "turn_rate": 0.28860028860028863,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        0.0,
+        0.10125000000000028,
+        0.11812500000000092
+      ],
+      "speaker_balance": 0.2736572890025576
+    },
+    "audio_quality": {
+      "snr_db": 100.06535339355469,
+      "spectral_centroid": 994.7727458499027,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.709462915601023,
+      "quality": 1.0,
+      "interaction": 0.6666666666666666
+    }
+  },
+  {
+    "recording_id": "91287ee26823cc6fada8fd38420e195g",
+    "duration": 17.6,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 2.6662500000000016,
+    "receiver_speech_duration": 2.3962499999999998,
+    "turn_taking": {
+      "total_turns": 5,
+      "turn_switches": 5,
+      "avg_turn_duration": -1.2555,
+      "turn_rate": 0.33593684387335176,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        0.3037499999999991,
+        1.7043750000000006,
+        2.53125,
+        0.3374999999999986,
+        1.4006250000000016
+      ],
+      "speaker_balance": 0.8987341772151892
+    },
+    "audio_quality": {
+      "snr_db": 96.06999206542969,
+      "spectral_centroid": 1086.4457175488656,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.9419393699654772,
+      "turns": 0.9594936708860757,
+      "quality": 1.0,
+      "interaction": 0.96
+    }
+  },
+  {
+    "recording_id": "707ba2ac9fd465fa75ee80cbc70d195f",
+    "duration": 9.28,
+    "conversation_detected": true,
+    "conversation_confidence": 0.7130234212549819,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 3.3581249999999985,
+    "receiver_speech_duration": 0.5906250000000011,
+    "turn_taking": {
+      "total_turns": 2,
+      "turn_switches": 2,
+      "avg_turn_duration": -0.04218749999999982,
+      "turn_rate": 0.30864197530864196,
+      "overlap_ratio": 0.07552083333333345,
+      "response_times": [
+        0.5737500000000004,
+        -0.4893750000000008
+      ],
+      "speaker_balance": 0.17587939698492502
+    },
+    "audio_quality": {
+      "snr_db": 98.1842041015625,
+      "spectral_centroid": 674.6179459660615,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.7012442330185411,
+      "turns": 0.67035175879397,
+      "quality": 1.0,
+      "interaction": 0.5
+    }
+  },
+  {
+    "recording_id": "f35dc3b13d7d7af4d2ad2b1ef5d4195o",
+    "duration": 9.57975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.45666666666666667,
+    "caller_has_speech": true,
+    "receiver_has_speech": false,
+    "caller_speech_duration": 7.087499999999999,
+    "receiver_speech_duration": 0.47250000000000014,
+    "turn_taking": {
+      "total_turns": 2,
+      "turn_switches": 2,
+      "avg_turn_duration": 0.8943749999999993,
+      "turn_rate": 0.25877405790069546,
+      "overlap_ratio": 0.06113537117903932,
+      "response_times": [
+        -2.4299999999999997,
+        0.6412500000000012
+      ],
+      "speaker_balance": 0.0666666666666667
+    },
+    "audio_quality": {
+      "snr_db": 103.67066955566406,
+      "spectral_centroid": 793.2966815028472,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.6266666666666667,
+      "quality": 1.0,
+      "interaction": 0.5
+    }
+  },
+  {
+    "recording_id": "e7c231923336d74e1fa68ff01f8b195f",
+    "duration": 182.46,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 89.91000000000004,
+    "receiver_speech_duration": 82.14749999999998,
+    "turn_taking": {
+      "total_turns": 68,
+      "turn_switches": 68,
+      "avg_turn_duration": 0.600055147058824,
+      "turn_rate": 0.3768121965241845,
+      "overlap_ratio": 0.14783991023003545,
+      "response_times": [
+        1.231875,
+        0.16875000000000018,
+        0.7424999999999997,
+        0.05062500000000014,
+        -2.1431250000000013,
+        -0.8774999999999977,
+        -3.425625,
+        0.7256249999999973,
+        -1.400624999999998,
+        -2.868750000000002,
+        1.3162499999999966,
+        0.6243750000000006,
+        -2.278125000000003,
+        0.4724999999999966,
+        0.9112500000000026,
+        -0.6075000000000017,
+        -6.193125000000002,
+        0.421875,
+        -0.286875000000002,
+        -0.30375000000000085,
+        0.2700000000000031,
+        -1.7381250000000037,
+        0.5737499999999969,
+        -0.84375,
+        1.2487500000000011,
+        0.7256249999999937,
+        -0.25312500000000426,
+        0.9281250000000085,
+        -1.3331249999999955,
+        0.5906250000000028,
+        -0.8774999999999977,
+        0.16875000000000284,
+        -0.06749999999999545,
+        -1.3499999999999943,
+        0.3375000000000057,
+        -0.8774999999999977,
+        -3.0543750000000074,
+        0.5062499999999943,
+        -0.8774999999999977,
+        0.6581249999999983,
+        -1.8225000000000051,
+        0.38812499999998806,
+        1.2824999999999989,
+        0.8774999999999977,
+        -4.454999999999998,
+        0.08437499999999432,
+        -1.6875,
+        -2.1768749999999955,
+        0.21937499999999943,
+        0.7256249999999795,
+        -1.383749999999992,
+        -0.6074999999999875,
+        -1.4175000000000182,
+        -0.1856249999999875,
+        -1.8562499999999886,
+        1.1981250000000045,
+        -0.2868749999999807,
+        -0.033749999999997726,
+        -0.033749999999997726,
+        -0.7425000000000068,
+        -5.990624999999994,
+        -4.657500000000027,
+        0.8268750000000011,
+        0.3206250000000068,
+        0.539999999999992,
+        -0.21937500000001364,
+        -0.10124999999999318,
+        -0.6243750000000148
+      ],
+      "speaker_balance": 0.913663663663663
+    },
+    "audio_quality": {
+      "snr_db": 105.39302825927734,
+      "spectral_centroid": 865.4057188401182,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9654654654654652,
+      "quality": 1.0,
+      "interaction": 0.4941176470588235
+    }
+  },
+  {
+    "recording_id": "f11c43de0bb71bcfd895e590f9ca195q",
+    "duration": 6.11975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0,
+    "receiver_speech_duration": 1.5525000000000002,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 102.01134490966797,
+      "spectral_centroid": 1799.5317637685002,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "86c3fbd65de11f4eed7cac986819195i",
+    "duration": 14.0,
+    "conversation_detected": false,
+    "conversation_confidence": 0.4,
+    "caller_has_speech": true,
+    "receiver_has_speech": false,
+    "caller_speech_duration": 9.551250000000001,
+    "receiver_speech_duration": 0.15187500000000004,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": -0.5062500000000001,
+      "turn_rate": 0.09794918885827976,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        0.5062500000000001
+      ],
+      "speaker_balance": 0.01590106007067138
+    },
+    "audio_quality": {
+      "snr_db": 102.34510803222656,
+      "spectral_centroid": 544.353270685743,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "7675855451909e6f7246a4f283a6195n",
+    "duration": 10.46,
+    "conversation_detected": true,
+    "conversation_confidence": 0.8592729591836734,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 6.615000000000001,
+    "receiver_speech_duration": 3.1218749999999993,
+    "turn_taking": {
+      "total_turns": 5,
+      "turn_switches": 5,
+      "avg_turn_duration": 0.8336250000000002,
+      "turn_rate": 0.5622320612832946,
+      "overlap_ratio": 0.27134724857685005,
+      "response_times": [
+        -0.43875,
+        -0.20250000000000012,
+        -0.7256250000000009,
+        -0.7931249999999999,
+        -2.0081249999999997
+      ],
+      "speaker_balance": 0.4719387755102039
+    },
+    "audio_quality": {
+      "snr_db": 101.2581558227539,
+      "spectral_centroid": 707.3474064380308,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.7887755102040815,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "d4d9c3cffe3a5cba76f23168cb06195q",
+    "duration": 43.86,
+    "conversation_detected": true,
+    "conversation_confidence": 0.9934641350210969,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 10.53,
+    "receiver_speech_duration": 23.996249999999993,
+    "turn_taking": {
+      "total_turns": 10,
+      "turn_switches": 10,
+      "avg_turn_duration": 0.30206249999999973,
+      "turn_rate": 0.2280079232753338,
+      "overlap_ratio": 0.0484801846864177,
+      "response_times": [
+        -9.129375000000001,
+        0.3881249999999987,
+        -0.5737500000000004,
+        1.2318749999999987,
+        -0.18562499999999815,
+        0.6075000000000017,
+        1.6706249999999976,
+        -0.7256249999999937,
+        3.121875000000003,
+        0.5737499999999969
+      ],
+      "speaker_balance": 0.43881856540084396
+    },
+    "audio_quality": {
+      "snr_db": 105.486572265625,
+      "spectral_centroid": 1473.3771930012563,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.7755274261603375,
+      "quality": 1.0,
+      "interaction": 0.6
+    }
+  },
+  {
+    "recording_id": "a4394614c2897821a663af15e3d2195h",
+    "duration": 18.04,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 4.691250000000002,
+    "receiver_speech_duration": 3.3243750000000007,
+    "turn_taking": {
+      "total_turns": 5,
+      "turn_switches": 5,
+      "avg_turn_duration": -0.22612499999999933,
+      "turn_rate": 0.3784116172366492,
+      "overlap_ratio": 0.024265644955300075,
+      "response_times": [
+        0.06750000000000012,
+        -2.3625000000000003,
+        0.8268749999999976,
+        1.1643749999999997,
+        1.4343749999999993
+      ],
+      "speaker_balance": 0.7086330935251798
+    },
+    "audio_quality": {
+      "snr_db": 100.47354125976562,
+      "spectral_centroid": 1211.247697492746,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8834532374100719,
+      "quality": 1.0,
+      "interaction": 0.72
+    }
+  },
+  {
+    "recording_id": "bd1e767362465bcff3c6df57ae9f195n",
+    "duration": 6.57975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": true,
+    "receiver_has_speech": false,
+    "caller_speech_duration": 5.8218749999999995,
+    "receiver_speech_duration": 0,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 112.57091522216797,
+      "spectral_centroid": 710.910805797457,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "e76cca0652339812549dc1c3ff67195m",
+    "duration": 13.85975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.7811857229280097,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 9.298125,
+    "receiver_speech_duration": 1.3499999999999985,
+    "turn_taking": {
+      "total_turns": 3,
+      "turn_switches": 3,
+      "avg_turn_duration": 2.4468749999999995,
+      "turn_rate": 0.2992891881780771,
+      "overlap_ratio": 0.13468013468013454,
+      "response_times": [
+        -1.9575,
+        0.20250000000000012,
+        -5.5856249999999985
+      ],
+      "speaker_balance": 0.14519056261342997
+    },
+    "audio_quality": {
+      "snr_db": 97.36138916015625,
+      "spectral_centroid": 721.0458008562797,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.658076225045372,
+      "quality": 1.0,
+      "interaction": 0.3333333333333333
+    }
+  },
+  {
+    "recording_id": "788e06d06140c2155af2a01dec72195h",
+    "duration": 13.67975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.7270986745213549,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 11.458125000000003,
+    "receiver_speech_duration": 3.1050000000000013,
+    "turn_taking": {
+      "total_turns": 3,
+      "turn_switches": 3,
+      "avg_turn_duration": 3.0037500000000015,
+      "turn_rate": 0.2503912363067292,
+      "overlap_ratio": 0.21549295774647892,
+      "response_times": [
+        -5.130000000000001,
+        -0.2193750000000012,
+        -3.661875000000002
+      ],
+      "speaker_balance": 0.2709867452135494
+    },
+    "audio_quality": {
+      "snr_db": 104.37064361572266,
+      "spectral_centroid": 802.9437675736627,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.7083946980854198,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "d954d8d53baa709b9667ec6108f1195e",
+    "duration": 12.67975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": false,
+    "receiver_has_speech": false,
+    "caller_speech_duration": 0.15187500000000043,
+    "receiver_speech_duration": 0,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 78.43280792236328,
+      "spectral_centroid": 18.311038530787535,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "078ca370556a57d71ef4d72f106c195q",
+    "duration": 3.87975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 2.8012500000000005,
+    "receiver_speech_duration": 1.8225000000000005,
+    "turn_taking": {
+      "total_turns": 2,
+      "turn_switches": 2,
+      "avg_turn_duration": 1.2234375000000002,
+      "turn_rate": 0.5175481158013908,
+      "overlap_ratio": 0.2707423580786027,
+      "response_times": [
+        0.286875,
+        -2.7337500000000006
+      ],
+      "speaker_balance": 0.6506024096385543
+    },
+    "audio_quality": {
+      "snr_db": 105.24324035644531,
+      "spectral_centroid": 751.8199197288948,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8602409638554217,
+      "quality": 1.0,
+      "interaction": 0.6
+    }
+  },
+  {
+    "recording_id": "3813e2999602a53a1b05d76c7a5d195j",
+    "duration": 22.65975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.9321510506798516,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 13.651874999999999,
+    "receiver_speech_duration": 5.264999999999997,
+    "turn_taking": {
+      "total_turns": 10,
+      "turn_switches": 10,
+      "avg_turn_duration": 0.2615624999999997,
+      "turn_rate": 0.48100048100048104,
+      "overlap_ratio": 0.12256493506493504,
+      "response_times": [
+        -0.9281250000000001,
+        1.4175,
+        -4.286249999999999,
+        -0.15187500000000043,
+        -0.20250000000000057,
+        1.6537500000000023,
+        -0.43874999999999886,
+        -0.08437500000000142,
+        -0.6412499999999994,
+        1.0462500000000006
+      ],
+      "speaker_balance": 0.38566131025957956
+    },
+    "audio_quality": {
+      "snr_db": 102.52951049804688,
+      "spectral_centroid": 1069.5871016672695,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.7542645241038318,
+      "quality": 1.0,
+      "interaction": 0.36
+    }
+  },
+  {
+    "recording_id": "195d0895507705f4101e34e23d4c195g",
+    "duration": 5.73975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.4,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0.15187500000000043,
+    "receiver_speech_duration": 0.5062499999999996,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": -0.2699999999999996,
+      "turn_rate": 1.0774410774410779,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        0.2699999999999996
+      ],
+      "speaker_balance": 0.30000000000000104
+    },
+    "audio_quality": {
+      "snr_db": 88.30918884277344,
+      "spectral_centroid": 13.872832720773037,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "6b54e6e7aff90584fd0dda4d9f10195n",
+    "duration": 165.96,
+    "conversation_detected": true,
+    "conversation_confidence": 0.7,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 109.14750000000004,
+    "receiver_speech_duration": 109.14750000000004,
+    "turn_taking": {
+      "total_turns": 47,
+      "turn_switches": 47,
+      "avg_turn_duration": 1.1417553191489376,
+      "turn_rate": 0.2854843363248447,
+      "overlap_ratio": 0.6629766297662978,
+      "response_times": [
+        -1.0125,
+        4.944375000000001,
+        -0.6749999999999989,
+        1.2993749999999995,
+        -0.5568750000000016,
+        1.5693750000000009,
+        -6.294374999999999,
+        1.1812499999999986,
+        -3.8643750000000026,
+        7.526250000000001,
+        -0.421875,
+        1.7887500000000003,
+        -10.496249999999996,
+        1.130625000000002,
+        -0.8774999999999977,
+        0.40500000000000114,
+        -0.8268750000000011,
+        0.5062500000000014,
+        -1.552500000000002,
+        6.699374999999996,
+        -0.286875000000002,
+        1.9406249999999972,
+        -15.271875000000009,
+        1.1981249999999903,
+        -1.8562500000000028,
+        6.378749999999997,
+        -5.180625000000006,
+        0.691874999999996,
+        -7.306875000000005,
+        0.2868749999999949,
+        -16.250625,
+        1.147500000000008,
+        -3.1387500000000017,
+        5.383124999999993,
+        -25.07625,
+        0.27000000000001023,
+        -1.8562499999999886,
+        1.1643750000000068,
+        -1.147500000000008,
+        2.2949999999999875,
+        -1.0800000000000125,
+        1.4512499999999875,
+        -0.4724999999999966,
+        4.1512500000000045,
+        -0.6581250000000125,
+        2.0756250000000023,
+        -2.9868749999999977
+      ],
+      "speaker_balance": 1.0
+    },
+    "audio_quality": {
+      "snr_db": 102.53730773925781,
+      "spectral_centroid": 643.7350469074721,
+      "dynamic_range": 0.0
+    },
+    "is_mono": true,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 1.0,
+      "quality": 1.0,
+      "interaction": 0.3829787234042553
+    }
+  },
+  {
+    "recording_id": "fa12e23b39a272fe08aa26a5bfcd195g",
+    "duration": 164.53975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.9726621783968311,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 109.13062500000001,
+    "receiver_speech_duration": 38.221875000000004,
+    "turn_taking": {
+      "total_turns": 52,
+      "turn_switches": 52,
+      "avg_turn_duration": 0.41343750000000096,
+      "turn_rate": 0.32189297832251973,
+      "overlap_ratio": 0.10863888018385048,
+      "response_times": [
+        0.405,
+        -0.9787499999999998,
+        1.316250000000002,
+        -4.539375000000003,
+        -0.37124999999999986,
+        -0.4049999999999976,
+        0.4556250000000013,
+        -1.0462500000000006,
+        -1.1812500000000021,
+        -0.9281250000000014,
+        0.5906250000000028,
+        -1.5187499999999972,
+        -0.6243750000000006,
+        1.0462500000000006,
+        -0.3712499999999963,
+        -3.931874999999998,
+        -1.417500000000004,
+        0.20250000000000057,
+        1.2149999999999963,
+        -4.32,
+        0.05062499999999659,
+        -0.7593749999999915,
+        0.7087500000000091,
+        -2.514374999999987,
+        0.8943749999999966,
+        -0.1349999999999909,
+        -1.4006250000000051,
+        -1.8562500000000028,
+        1.113749999999996,
+        1.7887500000000074,
+        -0.9787500000000051,
+        -3.5943749999999994,
+        0.2868749999999949,
+        -2.2950000000000017,
+        0.48937500000000966,
+        2.3287499999999994,
+        0.10124999999999318,
+        -1.9406249999999972,
+        0.48937499999999545,
+        0.5568749999999909,
+        0.9449999999999932,
+        0.8268750000000011,
+        1.5187499999999972,
+        -2.3287500000000136,
+        0.3206250000000068,
+        0.10124999999999318,
+        0.27000000000001023,
+        0.23624999999998408,
+        0.06749999999999545,
+        -1.451250000000016,
+        0.9787499999999909,
+        0.08437499999999432
+      ],
+      "speaker_balance": 0.35023967836709446
+    },
+    "audio_quality": {
+      "snr_db": 101.08856964111328,
+      "spectral_centroid": 1009.898700065931,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.7400958713468377,
+      "quality": 1.0,
+      "interaction": 0.5538461538461539
+    }
+  },
+  {
+    "recording_id": "481f84855221f213eba52e6c3dce195q",
+    "duration": 90.07975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.9878912147161433,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 53.206875000000025,
+    "receiver_speech_duration": 42.05250000000003,
+    "turn_taking": {
+      "total_turns": 30,
+      "turn_switches": 30,
+      "avg_turn_duration": 1.139625000000001,
+      "turn_rate": 0.3489259622723803,
+      "overlap_ratio": 0.22669283611383725,
+      "response_times": [
+        -2.2106250000000003,
+        1.0462500000000006,
+        -1.1306249999999984,
+        0.47250000000000014,
+        -0.18562499999999815,
+        0.134999999999998,
+        -0.28687499999999844,
+        -0.3881249999999987,
+        0.8268749999999976,
+        -0.16875000000000284,
+        -0.20250000000000057,
+        -0.5231250000000003,
+        -2.3118750000000006,
+        -4.303125000000001,
+        -0.3374999999999986,
+        -9.449999999999996,
+        0.8268750000000011,
+        -1.1981250000000045,
+        0.5906249999999957,
+        -1.4006250000000051,
+        -2.4975000000000023,
+        0.25312499999999716,
+        -3.240000000000002,
+        0.25312499999999716,
+        0.7424999999999997,
+        -4.505625000000002,
+        -0.9450000000000074,
+        -4.016249999999999,
+        -0.421875,
+        0.3881250000000023
+      ],
+      "speaker_balance": 0.7903583888360294
+    },
+    "audio_quality": {
+      "snr_db": 101.82502746582031,
+      "spectral_centroid": 940.9969037371052,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9161433555344117,
+      "quality": 1.0,
+      "interaction": 0.39999999999999997
+    }
+  },
+  {
+    "recording_id": "a40eaf5096d814742b49c0cc6bd0195j",
+    "duration": 13.2,
+    "conversation_detected": true,
+    "conversation_confidence": 0.9131794167503766,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 6.108749999999999,
+    "receiver_speech_duration": 1.5524999999999998,
+    "turn_taking": {
+      "total_turns": 3,
+      "turn_switches": 3,
+      "avg_turn_duration": -0.77625,
+      "turn_rate": 0.25039123630672927,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        0.9112499999999999,
+        0.5400000000000005,
+        0.8774999999999995
+      ],
+      "speaker_balance": 0.2541436464088398
+    },
+    "audio_quality": {
+      "snr_db": 100.36598205566406,
+      "spectral_centroid": 1119.7941191362702,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.9650430060271219,
+      "turns": 0.7016574585635359,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "045ddd321c7000352b7212127485195j",
+    "duration": 12.92,
+    "conversation_detected": true,
+    "conversation_confidence": 0.936641834365326,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 1.1137499999999996,
+    "receiver_speech_duration": 1.1474999999999955,
+    "turn_taking": {
+      "total_turns": 2,
+      "turn_switches": 2,
+      "avg_turn_duration": -0.7931250000000016,
+      "turn_rate": 0.2408912978018669,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        0.3881250000000023,
+        1.198125000000001
+      ],
+      "speaker_balance": 0.9705882352941211
+    },
+    "audio_quality": {
+      "snr_db": 101.11611938476562,
+      "spectral_centroid": 185.88746281035878,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.8273800309597538,
+      "turns": 0.9882352941176484,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "97934429c0092cede0f17fa7de97195j",
+    "duration": 34.07975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 13.854375,
+    "receiver_speech_duration": 6.041249999999998,
+    "turn_taking": {
+      "total_turns": 11,
+      "turn_switches": 11,
+      "avg_turn_duration": -0.5630113636363638,
+      "turn_rate": 0.3803102986300186,
+      "overlap_ratio": 0.003500583430571756,
+      "response_times": [
+        -0.10124999999999984,
+        1.1475000000000009,
+        0.5568750000000016,
+        0.9450000000000003,
+        0.2531250000000007,
+        0.354375000000001,
+        0.8606249999999989,
+        0.20249999999999702,
+        0.6581249999999983,
+        0.6075000000000017,
+        0.708750000000002
+      ],
+      "speaker_balance": 0.43605359317904985
+    },
+    "audio_quality": {
+      "snr_db": 101.0927734375,
+      "spectral_centroid": 880.1503581184678,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.7744214372716199,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "5aa29dd411eec76cf0ca9e08fdd7195p",
+    "duration": 8.97975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 1.5187499999999985,
+    "receiver_speech_duration": 1.4850000000000008,
+    "turn_taking": {
+      "total_turns": 3,
+      "turn_switches": 3,
+      "avg_turn_duration": -0.961875,
+      "turn_rate": 0.5093919134033748,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        1.0293750000000002,
+        0.8268750000000002,
+        1.029375
+      ],
+      "speaker_balance": 0.9777777777777793
+    },
+    "audio_quality": {
+      "snr_db": 103.8983154296875,
+      "spectral_centroid": 751.5622168646529,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9911111111111117,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "adc0031af9dbfa1098673a494525195i",
+    "duration": 12.52,
+    "conversation_detected": true,
+    "conversation_confidence": 0.8643552729038624,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 2.4637499999999966,
+    "receiver_speech_duration": 1.4343749999999986,
+    "turn_taking": {
+      "total_turns": 7,
+      "turn_switches": 7,
+      "avg_turn_duration": -0.443571428571429,
+      "turn_rate": 0.7381046526953999,
+      "overlap_ratio": 0.11921708185053373,
+      "response_times": [
+        -0.286875,
+        -0.21937499999999988,
+        2.851875000000001,
+        0.7931249999999999,
+        -0.354375000000001,
+        0.6581250000000018,
+        -0.3374999999999986
+      ],
+      "speaker_balance": 0.582191780821918
+    },
+    "audio_quality": {
+      "snr_db": 88.94786834716797,
+      "spectral_centroid": 1357.390303057888,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.7852076403781343,
+      "turns": 0.8328767123287673,
+      "quality": 1.0,
+      "interaction": 0.3428571428571428
+    }
+  },
+  {
+    "recording_id": "52e7974acebe574379d92c95bafc195k",
+    "duration": 14.83975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 4.4381249999999985,
+    "receiver_speech_duration": 2.6662500000000002,
+    "turn_taking": {
+      "total_turns": 5,
+      "turn_switches": 5,
+      "avg_turn_duration": -0.17887500000000028,
+      "turn_rate": 0.3950617283950617,
+      "overlap_ratio": 0.042666666666666596,
+      "response_times": [
+        1.0462500000000001,
+        1.1643749999999997,
+        0.16875000000000107,
+        -2.6325000000000003,
+        1.1475000000000009
+      ],
+      "speaker_balance": 0.6007604562737645
+    },
+    "audio_quality": {
+      "snr_db": 100.12879943847656,
+      "spectral_centroid": 1068.8636769795535,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8403041825095058,
+      "quality": 1.0,
+      "interaction": 0.96
+    }
+  },
+  {
+    "recording_id": "38e6814f069821abbb0185261ed2195n",
+    "duration": 43.272,
+    "conversation_detected": true,
+    "conversation_confidence": 0.7,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 32.400000000000006,
+    "receiver_speech_duration": 32.400000000000006,
+    "turn_taking": {
+      "total_turns": 15,
+      "turn_switches": 15,
+      "avg_turn_duration": 1.5412500000000005,
+      "turn_rate": 0.35987404408457035,
+      "overlap_ratio": 0.7773279352226721,
+      "response_times": [
+        -0.421875,
+        2.5818749999999993,
+        -5.146875000000001,
+        0.8775000000000013,
+        -2.7674999999999983,
+        1.5862499999999997,
+        -6.699375,
+        0.2699999999999996,
+        -2.3625000000000007,
+        0.7931249999999999,
+        -2.767500000000002,
+        1.3837499999999991,
+        -1.333124999999999,
+        1.7887500000000003,
+        -10.901250000000005
+      ],
+      "speaker_balance": 1.0
+    },
+    "audio_quality": {
+      "snr_db": 105.33890533447266,
+      "spectral_centroid": 699.6616333518671,
+      "dynamic_range": 0.0
+    },
+    "is_mono": true,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 1.0,
+      "quality": 1.0,
+      "interaction": 0.48
+    }
+  },
+  {
+    "recording_id": "7501eb06cb153d7fe5480fd53163195q",
+    "duration": 20.3,
+    "conversation_detected": true,
+    "conversation_confidence": 0.959775936883629,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 7.4081249999999965,
+    "receiver_speech_duration": 8.555624999999997,
+    "turn_taking": {
+      "total_turns": 5,
+      "turn_switches": 5,
+      "avg_turn_duration": 0.769499999999999,
+      "turn_rate": 0.2683843263553409,
+      "overlap_ratio": 0.3007246376811595,
+      "response_times": [
+        -3.121875000000001,
+        0.016875000000002416,
+        -2.0081249999999997,
+        1.8562500000000028,
+        -0.5906249999999993
+      ],
+      "speaker_balance": 0.8658777120315581
+    },
+    "audio_quality": {
+      "snr_db": 105.85018920898438,
+      "spectral_centroid": 1491.0716301814894,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9463510848126232,
+      "quality": 1.0,
+      "interaction": 0.24
+    }
+  },
+  {
+    "recording_id": "afe77f6ad2b745c3150292869683195n",
+    "duration": 19.83975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 6.851250000000004,
+    "receiver_speech_duration": 7.053750000000001,
+    "turn_taking": {
+      "total_turns": 8,
+      "turn_switches": 8,
+      "avg_turn_duration": 0.18140625000000032,
+      "turn_rate": 0.4426461942801812,
+      "overlap_ratio": 0.1363211951447246,
+      "response_times": [
+        1.2824999999999998,
+        -1.3500000000000014,
+        0.2699999999999996,
+        -1.08,
+        -1.7381250000000001,
+        0.84375,
+        -0.776250000000001,
+        1.0968750000000007
+      ],
+      "speaker_balance": 0.9712918660287085
+    },
+    "audio_quality": {
+      "snr_db": 108.26455688476562,
+      "spectral_centroid": 1053.7495525526028,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9885167464114835,
+      "quality": 1.0,
+      "interaction": 0.6
+    }
+  },
+  {
+    "recording_id": "09f33f9a9d894251090feae4ffb0195p",
+    "duration": 12.719375,
+    "conversation_detected": false,
+    "conversation_confidence": 0.6444925893784422,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0.489374999999999,
+    "receiver_speech_duration": 0.9956249999999969,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": -0.48937500000000256,
+      "turn_rate": 0.2418745275888134,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        0.48937500000000256
+      ],
+      "speaker_balance": 0.4915254237288141
+    },
+    "audio_quality": {
+      "snr_db": 83.29972076416016,
+      "spectral_centroid": 1510.604457488689,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.4583666816855706,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "958f0a6808934369e8a3aac7a887195k",
+    "duration": 63.05975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 27.320624999999982,
+    "receiver_speech_duration": 24.755625000000006,
+    "turn_taking": {
+      "total_turns": 20,
+      "turn_switches": 20,
+      "avg_turn_duration": 0.3594374999999991,
+      "turn_rate": 0.3282152271351939,
+      "overlap_ratio": 0.09083356410966482,
+      "response_times": [
+        -0.32062499999999994,
+        0.1687499999999993,
+        0.7087500000000002,
+        -1.4850000000000012,
+        1.5018749999999983,
+        -1.7718749999999979,
+        0.5906250000000028,
+        0.5399999999999991,
+        0.9281250000000014,
+        0.3881249999999987,
+        -2.835000000000001,
+        0.5906249999999993,
+        -0.20250000000000057,
+        1.7550000000000026,
+        0.7762500000000045,
+        -0.3206249999999997,
+        0.708750000000002,
+        -0.9449999999999932,
+        -5.366250000000001,
+        -2.5987499999999955
+      ],
+      "speaker_balance": 0.9061148857319341
+    },
+    "audio_quality": {
+      "snr_db": 107.2067642211914,
+      "spectral_centroid": 995.0869422141011,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9624459542927737,
+      "quality": 1.0,
+      "interaction": 0.66
+    }
+  },
+  {
+    "recording_id": "d303ce3cdb4105a6bda3f27ae143195d",
+    "duration": 11.23975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.9633390134529147,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 3.3749999999999987,
+    "receiver_speech_duration": 3.763124999999998,
+    "turn_taking": {
+      "total_turns": 5,
+      "turn_switches": 5,
+      "avg_turn_duration": -0.6277500000000007,
+      "turn_rate": 0.48178259560373377,
+      "overlap_ratio": 0.2682926829268293,
+      "response_times": [
+        -0.15187499999999998,
+        5.298750000000001,
+        -0.05062500000000014,
+        0.7256250000000026,
+        -2.6831250000000004
+      ],
+      "speaker_balance": 0.8968609865470853
+    },
+    "audio_quality": {
+      "snr_db": 96.40827941894531,
+      "spectral_centroid": 618.3265739967951,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9587443946188341,
+      "quality": 1.0,
+      "interaction": 0.24
+    }
+  },
+  {
+    "recording_id": "181abd17771c5f7032a06801abae195k",
+    "duration": 21.99975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 7.3575000000000035,
+    "receiver_speech_duration": 7.205625000000001,
+    "turn_taking": {
+      "total_turns": 11,
+      "turn_switches": 11,
+      "avg_turn_duration": -0.3574431818181816,
+      "turn_rate": 0.5702990829849972,
+      "overlap_ratio": 0.041994750656168006,
+      "response_times": [
+        0.556875,
+        0.16875000000000018,
+        -0.40499999999999936,
+        0.8268749999999994,
+        1.0968750000000007,
+        0.7593750000000021,
+        0.15187500000000043,
+        -0.40500000000000114,
+        0.84375,
+        0.18562499999999815,
+        0.15187499999999687
+      ],
+      "speaker_balance": 0.9793577981651373
+    },
+    "audio_quality": {
+      "snr_db": 106.32560729980469,
+      "spectral_centroid": 1214.4721946442733,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.991743119266055,
+      "quality": 1.0,
+      "interaction": 0.9818181818181818
+    }
+  },
+  {
+    "recording_id": "3ab879852a1bd6a98b192729499f195d",
+    "duration": 7.81975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": true,
+    "receiver_has_speech": false,
+    "caller_speech_duration": 0.9618750000000009,
+    "receiver_speech_duration": 0,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 85.36581420898438,
+      "spectral_centroid": 871.1946354729004,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "a86734df38b18c744da62343f48e195q",
+    "duration": 11.059875,
+    "conversation_detected": false,
+    "conversation_confidence": 0.5113095238095239,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 2.8349999999999986,
+    "receiver_speech_duration": 0.7931250000000021,
+    "turn_taking": {
+      "total_turns": 3,
+      "turn_switches": 3,
+      "avg_turn_duration": -0.7649999999999997,
+      "turn_rate": 0.5064893953782843,
+      "overlap_ratio": 0.025641025641025713,
+      "response_times": [
+        1.198125,
+        1.2487499999999994,
+        -0.15187500000000043
+      ],
+      "speaker_balance": 0.27976190476190566
+    },
+    "audio_quality": {
+      "snr_db": 89.91272735595703,
+      "spectral_centroid": 894.1892923911,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.7119047619047623,
+      "quality": 1.0,
+      "interaction": 0.6666666666666666
+    }
+  },
+  {
+    "recording_id": "97e4217f02c67a63aa9dc9c76495195d",
+    "duration": 11.49975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0,
+    "receiver_speech_duration": 1.6200000000000023,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 96.57622528076172,
+      "spectral_centroid": 8.154433810454497,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "fe08341d5fd103ab6567b99dc2ae195g",
+    "duration": 27.43975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 7.762500000000001,
+    "receiver_speech_duration": 5.7375,
+    "turn_taking": {
+      "total_turns": 9,
+      "turn_switches": 9,
+      "avg_turn_duration": -1.0181250000000002,
+      "turn_rate": 0.3853564547206166,
+      "overlap_ratio": 0.03468208092485544,
+      "response_times": [
+        1.8562499999999993,
+        1.3162500000000001,
+        1.6706250000000011,
+        1.3668750000000003,
+        -0.8099999999999987,
+        1.0631249999999994,
+        0.134999999999998,
+        1.265625,
+        1.2993750000000013
+      ],
+      "speaker_balance": 0.7391304347826085
+    },
+    "audio_quality": {
+      "snr_db": 103.65642547607422,
+      "spectral_centroid": 1263.8676483384338,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8956521739130434,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "482812418eb8fd6baeda76110555195q",
+    "duration": 13.0,
+    "conversation_detected": false,
+    "conversation_confidence": 0.1,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0.1687499999999993,
+    "receiver_speech_duration": 0.6243749999999997,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": -9.551250000000003,
+      "turn_rate": 0.09667089601836745,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        9.551250000000003
+      ],
+      "speaker_balance": 0.2702702702702693
+    },
+    "audio_quality": {
+      "snr_db": 79.4801254272461,
+      "spectral_centroid": 29.05948843965983,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 0.5,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "9b55e61f04c3b4e42e1ba44456fe195q",
+    "duration": 33.15975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.9959417382999044,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 17.668125,
+    "receiver_speech_duration": 8.133750000000008,
+    "turn_taking": {
+      "total_turns": 12,
+      "turn_switches": 12,
+      "avg_turn_duration": 0.21093750000000078,
+      "turn_rate": 0.4031242126480222,
+      "overlap_ratio": 0.056122448979591844,
+      "response_times": [
+        1.805625,
+        0.0506249999999997,
+        -0.18562500000000082,
+        -0.20250000000000057,
+        0.8774999999999977,
+        0.18562499999999815,
+        0.7256250000000009,
+        -2.649374999999999,
+        -1.4175000000000004,
+        -2.8518750000000033,
+        0.7087499999999984,
+        0.421875
+      ],
+      "speaker_balance": 0.46036294173830034
+    },
+    "audio_quality": {
+      "snr_db": 102.98225402832031,
+      "spectral_centroid": 1087.0259480171235,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.7841451766953201,
+      "quality": 1.0,
+      "interaction": 0.6
+    }
+  },
+  {
+    "recording_id": "64e481ff8e787742ad6e17c640b7195h",
+    "duration": 13.95975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": true,
+    "receiver_has_speech": false,
+    "caller_speech_duration": 11.795625000000001,
+    "receiver_speech_duration": 0,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 103.72760009765625,
+      "spectral_centroid": 998.7855795892007,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "12e935e1883a64b376c3dc2d92b9195l",
+    "duration": 169.179875,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 65.61000000000008,
+    "receiver_speech_duration": 93.99374999999998,
+    "turn_taking": {
+      "total_turns": 48,
+      "turn_switches": 48,
+      "avg_turn_duration": 0.5762109375000014,
+      "turn_rate": 0.28688294951532467,
+      "overlap_ratio": 0.15542107917297054,
+      "response_times": [
+        0.18562500000000015,
+        1.1812500000000004,
+        0.6581250000000005,
+        0.7762499999999992,
+        0.6581250000000001,
+        -1.9574999999999996,
+        0.708750000000002,
+        0.6581249999999983,
+        -1.1981249999999974,
+        0.7256250000000009,
+        0.8606250000000024,
+        -0.9281249999999943,
+        -1.5524999999999949,
+        -2.6325000000000003,
+        0.48937500000000256,
+        -0.9281250000000014,
+        -2.092500000000001,
+        -0.6243750000000006,
+        -0.9281250000000014,
+        -2.0081249999999997,
+        -8.741250000000008,
+        -1.1812500000000057,
+        0.6074999999999875,
+        -0.9787500000000051,
+        1.1812499999999915,
+        0.8775000000000119,
+        -7.155000000000001,
+        1.0125000000000028,
+        0.7424999999999926,
+        2.1768749999999955,
+        1.0800000000000125,
+        1.0293749999999875,
+        -0.033749999999997726,
+        -1.265625,
+        1.265625,
+        -1.4006250000000051,
+        -2.6493750000000063,
+        0.35437500000000455,
+        -5.450625000000002,
+        0.25312500000001137,
+        -0.8100000000000023,
+        -0.06749999999999545,
+        1.2824999999999989,
+        0.8606249999999989,
+        -4.725000000000023,
+        0.2699999999999818,
+        1.1812499999999773,
+        0.5737500000000182
+      ],
+      "speaker_balance": 0.6980251346499113
+    },
+    "audio_quality": {
+      "snr_db": 107.99891662597656,
+      "spectral_centroid": 817.3429098672889,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8792100538599645,
+      "quality": 1.0,
+      "interaction": 0.625
+    }
+  },
+  {
+    "recording_id": "f98099ea3aee77260980eb78316d195q",
+    "duration": 9.35975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.8884931506849314,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 1.7887499999999994,
+    "receiver_speech_duration": 2.46375,
+    "turn_taking": {
+      "total_turns": 3,
+      "turn_switches": 3,
+      "avg_turn_duration": -0.27562499999999995,
+      "turn_rate": 0.4163413999479574,
+      "overlap_ratio": 0.07259953161592504,
+      "response_times": [
+        2.0250000000000004,
+        -0.0506249999999997,
+        -1.1475000000000009
+      ],
+      "speaker_balance": 0.7260273972602737
+    },
+    "audio_quality": {
+      "snr_db": 103.87298583984375,
+      "spectral_centroid": 1200.9030397971644,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8904109589041094,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "441dc53ef7adb99b01f8c9d07461195e",
+    "duration": 201.85975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.8437308706658552,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 147.16687499999998,
+    "receiver_speech_duration": 22.848749999999992,
+    "turn_taking": {
+      "total_turns": 39,
+      "turn_switches": 39,
+      "avg_turn_duration": 0.2937980769230759,
+      "turn_rate": 0.19863438857852267,
+      "overlap_ratio": 0.048560378169316715,
+      "response_times": [
+        0.8100000000000005,
+        -3.0543749999999985,
+        -0.37124999999999986,
+        -0.708750000000002,
+        0.6750000000000007,
+        1.1137499999999996,
+        0.489374999999999,
+        0.9618749999999991,
+        1.0968750000000043,
+        -0.556874999999998,
+        0.8774999999999977,
+        0.11812499999999915,
+        0.421875,
+        -18.343124999999993,
+        1.0631250000000136,
+        0.43874999999999886,
+        1.0462500000000006,
+        1.400624999999991,
+        1.4681250000000006,
+        1.147500000000008,
+        1.974375000000009,
+        0.8100000000000023,
+        2.5818749999999966,
+        0.9618750000000063,
+        1.2824999999999989,
+        0.7931250000000034,
+        0.9787500000000051,
+        -2.9868749999999977,
+        0.4724999999999966,
+        -2.2612499999999898,
+        -0.7931250000000034,
+        -2.008125000000007,
+        1.805624999999992,
+        -0.9449999999999932,
+        0.6243750000000148,
+        0.9956249999999898,
+        -2.7843750000000114,
+        0.016874999999998863,
+        -3.071249999999992
+      ],
+      "speaker_balance": 0.15525742460726977
+    },
+    "audio_quality": {
+      "snr_db": 104.45343017578125,
+      "spectral_centroid": 794.0657109103082,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.6621029698429078,
+      "quality": 1.0,
+      "interaction": 0.6410256410256411
+    }
+  },
+  {
+    "recording_id": "165d008601fd01550d2692003b97195q",
+    "duration": 17.41975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.5124870466321243,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 2.7675,
+    "receiver_speech_duration": 6.51375,
+    "turn_taking": {
+      "total_turns": 4,
+      "turn_switches": 4,
+      "avg_turn_duration": -1.1137500000000005,
+      "turn_rate": 0.24436807941962577,
+      "overlap_ratio": 0.13608247422680417,
+      "response_times": [
+        6.125625000000001,
+        -2.227500000000001,
+        0.354375000000001,
+        0.20250000000000057
+      ],
+      "speaker_balance": 0.42487046632124353
+    },
+    "audio_quality": {
+      "snr_db": 96.61463928222656,
+      "spectral_centroid": 37.34133246228385,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.7699481865284974,
+      "quality": 1.0,
+      "interaction": 0.6
+    }
+  },
+  {
+    "recording_id": "22deed95399ed0beba56d0376087195j",
+    "duration": 4.12,
+    "conversation_detected": false,
+    "conversation_confidence": 0.6325,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 3.054375000000001,
+    "receiver_speech_duration": 2.46375,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": 1.400625,
+      "turn_rate": 0.2428658166363084,
+      "overlap_ratio": 0.34016393442622944,
+      "response_times": [
+        -1.400625
+      ],
+      "speaker_balance": 0.8066298342541434
+    },
+    "audio_quality": {
+      "snr_db": 106.05335235595703,
+      "spectral_centroid": 815.5765266802871,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "dad9519fb243dcf53a0d760e10ed195q",
+    "duration": 9.79975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0,
+    "receiver_speech_duration": 0.8268750000000007,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 87.08064270019531,
+      "spectral_centroid": 87.82339344800917,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "fe08da504dccc2c244adbc15b043195c",
+    "duration": 5.17975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.5435254499672928,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 1.5862500000000002,
+    "receiver_speech_duration": 0.54,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": 1.130625,
+      "turn_rate": 0.6304176516942473,
+      "overlap_ratio": 0.3404255319148936,
+      "response_times": [
+        -1.130625
+      ],
+      "speaker_balance": 0.3404255319148936
+    },
+    "audio_quality": {
+      "snr_db": 94.17113494873047,
+      "spectral_centroid": 1360.826612649273,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.7789452173100442,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "722313d2b0d80739b06f61a2a402195e",
+    "duration": 45.27975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 11.03624999999999,
+    "receiver_speech_duration": 15.103124999999995,
+    "turn_taking": {
+      "total_turns": 19,
+      "turn_switches": 19,
+      "avg_turn_duration": -0.39789473684210597,
+      "turn_rate": 0.4718884853000528,
+      "overlap_ratio": 0.09178541492036846,
+      "response_times": [
+        -0.067499999999999,
+        0.5568749999999998,
+        3.493125000000001,
+        -0.18562499999999815,
+        1.0799999999999983,
+        0.4387500000000024,
+        1.8731249999999982,
+        -1.1643750000000033,
+        -1.8056249999999991,
+        0.7931249999999999,
+        -0.10125000000000028,
+        1.2993750000000013,
+        1.1474999999999973,
+        0.9281249999999943,
+        1.130625000000002,
+        -0.4724999999999966,
+        -1.4174999999999969,
+        -1.0293749999999946,
+        1.0631250000000065
+      ],
+      "speaker_balance": 0.7307262569832398
+    },
+    "audio_quality": {
+      "snr_db": 107.28475952148438,
+      "spectral_centroid": 1210.5851299106564,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8922905027932959,
+      "quality": 1.0,
+      "interaction": 0.631578947368421
+    }
+  },
+  {
+    "recording_id": "ae9b2ef589d54eecd3e6ff7885e7195f",
+    "duration": 22.8,
+    "conversation_detected": true,
+    "conversation_confidence": 0.8163945379298879,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 1.1981250000000006,
+    "receiver_speech_duration": 9.348749999999999,
+    "turn_taking": {
+      "total_turns": 4,
+      "turn_switches": 4,
+      "avg_turn_duration": -0.7804687500000002,
+      "turn_rate": 0.19162250366777447,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        0.995625,
+        0.2699999999999996,
+        0.9956250000000004,
+        0.8606250000000006
+      ],
+      "speaker_balance": 0.12815884476534303
+    },
+    "audio_quality": {
+      "snr_db": 101.7884521484375,
+      "spectral_centroid": 1345.7132880728195,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.7245104384381531,
+      "turns": 0.6512635379061372,
+      "quality": 1.0,
+      "interaction": 1.0
+    }
+  },
+  {
+    "recording_id": "0b71364569b6812ff6994078017a195k",
+    "duration": 44.56,
+    "conversation_detected": true,
+    "conversation_confidence": 0.8276464897733554,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 30.526875000000008,
+    "receiver_speech_duration": 4.623749999999998,
+    "turn_taking": {
+      "total_turns": 16,
+      "turn_switches": 16,
+      "avg_turn_duration": -0.19828124999999996,
+      "turn_rate": 0.37431825825035453,
+      "overlap_ratio": 0.047374654559810526,
+      "response_times": [
+        -0.0675,
+        0.2024999999999999,
+        0.1349999999999998,
+        -0.18562499999999993,
+        -0.6412499999999994,
+        0.4893750000000008,
+        1.5187500000000007,
+        -0.286875000000002,
+        -0.978749999999998,
+        0.3206249999999997,
+        -0.16875000000000284,
+        1.2993750000000048,
+        0.5062499999999943,
+        0.421875,
+        1.0631249999999994,
+        -0.4556249999999977
+      ],
+      "speaker_balance": 0.15146489773355434
+    },
+    "audio_quality": {
+      "snr_db": 104.45484161376953,
+      "spectral_centroid": 979.3313159672978,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.6605859590934218,
+      "quality": 1.0,
+      "interaction": 0.5625
+    }
+  },
+  {
+    "recording_id": "8e2f964925b4abf8805ba9def3e9195g",
+    "duration": 24.759875,
+    "conversation_detected": true,
+    "conversation_confidence": 0.8556878306878307,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 12.7575,
+    "receiver_speech_duration": 2.851875000000005,
+    "turn_taking": {
+      "total_turns": 6,
+      "turn_switches": 6,
+      "avg_turn_duration": -1.1615624999999994,
+      "turn_rate": 0.25342519996832186,
+      "overlap_ratio": 0.014967925873129052,
+      "response_times": [
+        0.489374999999999,
+        0.8943750000000001,
+        0.6074999999999982,
+        1.5187500000000007,
+        -0.354375000000001,
+        3.813749999999999
+      ],
+      "speaker_balance": 0.22354497354497394
+    },
+    "audio_quality": {
+      "snr_db": 104.436767578125,
+      "spectral_centroid": 1050.0789834231707,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.6894179894179896,
+      "quality": 1.0,
+      "interaction": 0.6666666666666666
+    }
+  },
+  {
+    "recording_id": "6bea9341be541da16d88804921e0195j",
+    "duration": 17.93975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.5165690376569038,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 6.1762500000000005,
+    "receiver_speech_duration": 8.06625,
+    "turn_taking": {
+      "total_turns": 8,
+      "turn_switches": 8,
+      "avg_turn_duration": -0.08437499999999976,
+      "turn_rate": 0.44597749207344695,
+      "overlap_ratio": 0.20507996237064927,
+      "response_times": [
+        1.9406249999999998,
+        0.6074999999999999,
+        -0.40500000000000114,
+        1.6875,
+        -0.33750000000000036,
+        2.345625,
+        -2.7337500000000006,
+        -2.4299999999999997
+      ],
+      "speaker_balance": 0.7656903765690377
+    },
+    "audio_quality": {
+      "snr_db": 103.94538879394531,
+      "spectral_centroid": 13.54400039086989,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.9062761506276151,
+      "quality": 1.0,
+      "interaction": 0.44999999999999996
+    }
+  },
+  {
+    "recording_id": "58a6b706ca6bc7a0329ed0e648a7195k",
+    "duration": 14.92,
+    "conversation_detected": false,
+    "conversation_confidence": 0.5513173652694611,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 2.8181249999999984,
+    "receiver_speech_duration": 1.1643749999999995,
+    "turn_taking": {
+      "total_turns": 3,
+      "turn_switches": 3,
+      "avg_turn_duration": -2.5143750000000007,
+      "turn_rate": 0.21290751829673987,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        4.910625000000001,
+        1.9237499999999983,
+        0.708750000000002
+      ],
+      "speaker_balance": 0.4131736526946108
+    },
+    "audio_quality": {
+      "snr_db": 97.10049438476562,
+      "spectral_centroid": 33.11977099451304,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.7652694610778443,
+      "quality": 1.0,
+      "interaction": 0.7999999999999999
+    }
+  },
+  {
+    "recording_id": "f49442b8e756eaf9ba19439e730d195o",
+    "duration": 17.33975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 5.805,
+    "receiver_speech_duration": 9.061874999999992,
+    "turn_taking": {
+      "total_turns": 9,
+      "turn_switches": 9,
+      "avg_turn_duration": 0.22874999999999934,
+      "turn_rate": 0.6356773937226858,
+      "overlap_ratio": 0.25625744934445754,
+      "response_times": [
+        0.21937499999999988,
+        0.9787499999999998,
+        0.067499999999999,
+        -0.3374999999999986,
+        -1.265625,
+        0.5062500000000014,
+        -0.8099999999999987,
+        -1.6875,
+        0.2700000000000031
+      ],
+      "speaker_balance": 0.6405959031657361
+    },
+    "audio_quality": {
+      "snr_db": 103.94100952148438,
+      "spectral_centroid": 1085.790956115,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8562383612662945,
+      "quality": 1.0,
+      "interaction": 0.5333333333333333
+    }
+  },
+  {
+    "recording_id": "104eb02bb3aba8a4450215e195e6195d",
+    "duration": 6.83975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.1,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0,
+    "receiver_speech_duration": 0.45562499999999995,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 90.7951431274414,
+      "spectral_centroid": 257.01692837369916,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 0.5,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "892ea0e2fd7158f48c39e6474bf9195n",
+    "duration": 16.59975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.923854980363563,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 1.856250000000001,
+    "receiver_speech_duration": 3.054375000000002,
+    "turn_taking": {
+      "total_turns": 6,
+      "turn_switches": 6,
+      "avg_turn_duration": -1.4231249999999995,
+      "turn_rate": 0.40821533358846795,
+      "overlap_ratio": 0.03444316877152708,
+      "response_times": [
+        3.2400000000000007,
+        -0.6750000000000007,
+        0.7256249999999991,
+        0.8606249999999989,
+        3.1556250000000006,
+        1.2318749999999987
+      ],
+      "speaker_balance": 0.6077348066298341
+    },
+    "audio_quality": {
+      "snr_db": 96.41327667236328,
+      "spectral_centroid": 1463.9261556033575,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.7787962176425642,
+      "turns": 0.8430939226519336,
+      "quality": 1.0,
+      "interaction": 0.6
+    }
+  },
+  {
+    "recording_id": "8354cd75943e4b070387b954c69a195h",
+    "duration": 9.14,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0,
+    "receiver_speech_duration": 1.18125,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 97.35855865478516,
+      "spectral_centroid": 50.349655658961886,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "93c14fe321d372028bbb61a92b02195k",
+    "duration": 4.63975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0,
+    "receiver_speech_duration": 0.18562499999999993,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 79.13031005859375,
+      "spectral_centroid": 1845.6835720030142,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "971cb4a2a0d81d6c0b5eb179b090195g",
+    "duration": 42.69975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.8983249041210006,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 17.600624999999997,
+    "receiver_speech_duration": 5.90625,
+    "turn_taking": {
+      "total_turns": 11,
+      "turn_switches": 11,
+      "avg_turn_duration": -1.0416477272727278,
+      "turn_rate": 0.3074772886093641,
+      "overlap_ratio": 0.03443396226415091,
+      "response_times": [
+        4.556250000000002,
+        0.5568750000000016,
+        1.4343749999999993,
+        0.47250000000000014,
+        1.4006250000000016,
+        0.5906249999999993,
+        1.4849999999999994,
+        -1.2318749999999987,
+        0.6412499999999994,
+        0.033749999999997726,
+        1.5187500000000043
+      ],
+      "speaker_balance": 0.3355704697986578
+    },
+    "audio_quality": {
+      "snr_db": 92.91035461425781,
+      "spectral_centroid": 1227.936539405795,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.9720640074162293,
+      "turns": 0.7342281879194631,
+      "quality": 1.0,
+      "interaction": 0.8727272727272727
+    }
+  },
+  {
+    "recording_id": "e16365f1f4a0678c08374c4ebe4f195e",
+    "duration": 11.22,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 6.041250000000002,
+    "receiver_speech_duration": 2.2781250000000006,
+    "turn_taking": {
+      "total_turns": 4,
+      "turn_switches": 4,
+      "avg_turn_duration": -0.31218750000000006,
+      "turn_rate": 0.3569834895136099,
+      "overlap_ratio": 0.028614457831325272,
+      "response_times": [
+        0.38812500000000005,
+        0.8774999999999991,
+        -0.3206249999999997,
+        0.30375000000000085
+      ],
+      "speaker_balance": 0.3770949720670391
+    },
+    "audio_quality": {
+      "snr_db": 101.02295684814453,
+      "spectral_centroid": 722.0718342568249,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.7508379888268156,
+      "quality": 1.0,
+      "interaction": 0.8999999999999999
+    }
+  },
+  {
+    "recording_id": "adf2dbc04e828a02a3444ea8f571195n",
+    "duration": 5.832,
+    "conversation_detected": false,
+    "conversation_confidence": 0.4427499999999999,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 5.8218749999999995,
+    "receiver_speech_duration": 5.8218749999999995,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": 5.8218749999999995,
+      "turn_rate": 0.17176596886741816,
+      "overlap_ratio": 1.0,
+      "response_times": [
+        -5.8218749999999995
+      ],
+      "speaker_balance": 1.0
+    },
+    "audio_quality": {
+      "snr_db": 101.36071014404297,
+      "spectral_centroid": 770.4992371509207,
+      "dynamic_range": 0.0
+    },
+    "is_mono": true,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "453063e4751b35fd46a4eb629ea0195p",
+    "duration": 10.2,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 3.121874999999999,
+    "receiver_speech_duration": 3.121875000000001,
+    "turn_taking": {
+      "total_turns": 4,
+      "turn_switches": 4,
+      "avg_turn_duration": -0.35437500000000044,
+      "turn_rate": 0.43814609433833085,
+      "overlap_ratio": 0.07024029574861365,
+      "response_times": [
+        -0.35437499999999966,
+        -0.2868750000000002,
+        1.3499999999999996,
+        0.708750000000002
+      ],
+      "speaker_balance": 0.9999999999999993
+    },
+    "audio_quality": {
+      "snr_db": 108.97650909423828,
+      "spectral_centroid": 959.4779634612008,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9999999999999998,
+      "quality": 1.0,
+      "interaction": 0.6
+    }
+  },
+  {
+    "recording_id": "771445c653b5ad294d4766aa6e13195g",
+    "duration": 37.82,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 11.35687500000001,
+    "receiver_speech_duration": 6.496875000000001,
+    "turn_taking": {
+      "total_turns": 9,
+      "turn_switches": 9,
+      "avg_turn_duration": -1.35,
+      "turn_rate": 0.25752454530822466,
+      "overlap_ratio": 0.016417189763399336,
+      "response_times": [
+        1.8562500000000006,
+        1.620000000000001,
+        1.2487500000000011,
+        1.4681250000000006,
+        0.9281250000000014,
+        -0.5737500000000004,
+        3.1218749999999993,
+        1.8056249999999991,
+        0.6749999999999972
+      ],
+      "speaker_balance": 0.5720653789004454
+    },
+    "audio_quality": {
+      "snr_db": 102.4367904663086,
+      "spectral_centroid": 782.4454241238291,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8288261515601781,
+      "quality": 1.0,
+      "interaction": 0.9333333333333333
+    }
+  },
+  {
+    "recording_id": "839da9b227d27142f63493e377f8195n",
+    "duration": 30.01975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 9.382499999999993,
+    "receiver_speech_duration": 8.370000000000008,
+    "turn_taking": {
+      "total_turns": 5,
+      "turn_switches": 5,
+      "avg_turn_duration": 0.6918750000000002,
+      "turn_rate": 0.19066685733352398,
+      "overlap_ratio": 0.17438867438867442,
+      "response_times": [
+        -0.40500000000000114,
+        0.776250000000001,
+        0.489374999999999,
+        -1.2318749999999987,
+        -3.0881250000000016
+      ],
+      "speaker_balance": 0.8920863309352534
+    },
+    "audio_quality": {
+      "snr_db": 97.78616333007812,
+      "spectral_centroid": 849.1422304226433,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9568345323741013,
+      "quality": 1.0,
+      "interaction": 0.48
+    }
+  },
+  {
+    "recording_id": "199bc054230c9b318b98ea3f520a195e",
+    "duration": 84.54,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 16.115624999999987,
+    "receiver_speech_duration": 15.035625000000005,
+    "turn_taking": {
+      "total_turns": 21,
+      "turn_switches": 21,
+      "avg_turn_duration": -0.9658928571428576,
+      "turn_rate": 0.257702307816203,
+      "overlap_ratio": 0.05881134810519781,
+      "response_times": [
+        1.1812500000000001,
+        3.4593750000000005,
+        1.4175000000000004,
+        -0.13500000000000156,
+        1.7212500000000013,
+        -3.1724999999999994,
+        -0.30375000000000085,
+        -0.8774999999999977,
+        1.0799999999999983,
+        0.5062500000000014,
+        0.20250000000000057,
+        10.935000000000002,
+        -0.708750000000002,
+        1.0631249999999994,
+        -1.2318750000000023,
+        0.3712499999999963,
+        0.8775000000000048,
+        1.1812499999999986,
+        0.9956249999999969,
+        1.2487500000000011,
+        0.4725000000000108
+      ],
+      "speaker_balance": 0.9329842931937183
+    },
+    "audio_quality": {
+      "snr_db": 100.28717803955078,
+      "spectral_centroid": 670.0562915726973,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9731937172774874,
+      "quality": 1.0,
+      "interaction": 0.7428571428571429
+    }
+  },
+  {
+    "recording_id": "ddd7b10e40e0dfffe678f7a26707195j",
+    "duration": 21.259875,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 14.394375000000002,
+    "receiver_speech_duration": 7.492500000000004,
+    "turn_taking": {
+      "total_turns": 10,
+      "turn_switches": 10,
+      "avg_turn_duration": 0.44887500000000075,
+      "turn_rate": 0.47256187607064803,
+      "overlap_ratio": 0.26874003189792683,
+      "response_times": [
+        -0.47250000000000014,
+        0.0674999999999999,
+        -2.0587500000000016,
+        0.2699999999999996,
+        1.4512499999999982,
+        0.5568750000000016,
+        -3.2231249999999996,
+        0.8943750000000001,
+        -2.4975000000000023,
+        0.5231249999999967
+      ],
+      "speaker_balance": 0.5205158264947247
+    },
+    "audio_quality": {
+      "snr_db": 101.61750030517578,
+      "spectral_centroid": 993.6991787528826,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8082063305978899,
+      "quality": 1.0,
+      "interaction": 0.6
+    }
+  },
+  {
+    "recording_id": "7cca611468ca2d519f3e5318d9e7195g",
+    "duration": 33.95975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 15.136874999999996,
+    "receiver_speech_duration": 10.428749999999997,
+    "turn_taking": {
+      "total_turns": 16,
+      "turn_switches": 16,
+      "avg_turn_duration": -0.1244531250000006,
+      "turn_rate": 0.5008706540666392,
+      "overlap_ratio": 0.060750132065504475,
+      "response_times": [
+        0.20250000000000012,
+        -0.16874999999999996,
+        0.9112499999999999,
+        -0.5062499999999996,
+        0.8775000000000013,
+        0.7256250000000009,
+        1.0968750000000007,
+        1.1475000000000009,
+        1.1137499999999996,
+        -0.37124999999999986,
+        0.21937500000000298,
+        -0.47250000000000014,
+        -0.2699999999999996,
+        -3.1893749999999983,
+        0.2699999999999996,
+        0.40500000000000114
+      ],
+      "speaker_balance": 0.6889632107023411
+    },
+    "audio_quality": {
+      "snr_db": 101.87239837646484,
+      "spectral_centroid": 987.5529019435282,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8755852842809364,
+      "quality": 1.0,
+      "interaction": 0.75
+    }
+  },
+  {
+    "recording_id": "c69d8b64939e31472ba9ae44a518195j",
+    "duration": 35.73975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.9924510818438381,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 17.938125,
+    "receiver_speech_duration": 13.094999999999999,
+    "turn_taking": {
+      "total_turns": 8,
+      "turn_switches": 8,
+      "avg_turn_duration": 0.3585937499999996,
+      "turn_rate": 0.23882824890381568,
+      "overlap_ratio": 0.1445843828715365,
+      "response_times": [
+        -0.43875,
+        0.3374999999999999,
+        -0.40499999999999936,
+        1.5693750000000009,
+        -0.43874999999999886,
+        2.1262500000000024,
+        0.7931249999999999,
+        -6.412500000000001
+      ],
+      "speaker_balance": 0.7300094073377233
+    },
+    "audio_quality": {
+      "snr_db": 103.0843734741211,
+      "spectral_centroid": 1022.9958824096317,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8920037629350893,
+      "quality": 1.0,
+      "interaction": 0.44999999999999996
+    }
+  },
+  {
+    "recording_id": "cef47dfa16166a7b54cf20451b97195p",
+    "duration": 28.21975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 7.5431250000000025,
+    "receiver_speech_duration": 12.858749999999993,
+    "turn_taking": {
+      "total_turns": 6,
+      "turn_switches": 6,
+      "avg_turn_duration": -0.19124999999999992,
+      "turn_rate": 0.22489282451331785,
+      "overlap_ratio": 0.02593295382669188,
+      "response_times": [
+        0.7931250000000003,
+        -0.2868750000000002,
+        1.0799999999999983,
+        -2.092500000000001,
+        0.8606250000000024,
+        0.7931249999999999
+      ],
+      "speaker_balance": 0.586614173228347
+    },
+    "audio_quality": {
+      "snr_db": 105.9219741821289,
+      "spectral_centroid": 1130.0970102998074,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8346456692913388,
+      "quality": 1.0,
+      "interaction": 0.7999999999999999
+    }
+  },
+  {
+    "recording_id": "3e2296a3ffeaf4c729bdb8fc12ac195l",
+    "duration": 106.72,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 30.42562499999997,
+    "receiver_speech_duration": 51.907499999999985,
+    "turn_taking": {
+      "total_turns": 43,
+      "turn_switches": 43,
+      "avg_turn_duration": -0.15815406976744306,
+      "turn_rate": 0.42090322896401516,
+      "overlap_ratio": 0.0890320449289721,
+      "response_times": [
+        1.029375,
+        0.84375,
+        0.8099999999999987,
+        1.0462500000000006,
+        1.0968749999999972,
+        0.9281249999999979,
+        -0.84375,
+        0.8775000000000013,
+        -1.1306249999999984,
+        -1.063125000000003,
+        -0.2699999999999996,
+        1.0631249999999994,
+        -0.6749999999999972,
+        -0.8775000000000048,
+        1.6706250000000011,
+        -0.84375,
+        1.265625,
+        0.7762499999999974,
+        0.7762500000000045,
+        1.0799999999999983,
+        1.670624999999994,
+        0.8943749999999966,
+        -1.1474999999999937,
+        0.421875,
+        -1.2149999999999892,
+        0.2362499999999983,
+        0.033749999999997726,
+        -0.961874999999992,
+        1.0800000000000125,
+        -0.10124999999999318,
+        1.147500000000008,
+        1.0293750000000017,
+        1.417500000000004,
+        0.5737499999999898,
+        -0.5062499999999943,
+        -0.9112499999999955,
+        0.3374999999999915,
+        -1.7887499999999932,
+        0.3712500000000034,
+        -2.700000000000003,
+        -0.9112499999999955,
+        0.5231250000000074,
+        -0.25312499999999716
+      ],
+      "speaker_balance": 0.5861508452535757
+    },
+    "audio_quality": {
+      "snr_db": 102.68497467041016,
+      "spectral_centroid": 1502.772578077016,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.8344603381014303,
+      "quality": 1.0,
+      "interaction": 0.6976744186046512
+    }
+  },
+  {
+    "recording_id": "e1750030a485652f5b4e3a738151195e",
+    "duration": 9.51975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.752133085464989,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 3.3243750000000007,
+    "receiver_speech_duration": 0.6749999999999994,
+    "turn_taking": {
+      "total_turns": 3,
+      "turn_switches": 3,
+      "avg_turn_duration": -0.3656249999999995,
+      "turn_rate": 0.4666083406240887,
+      "overlap_ratio": 0.06036745406824148,
+      "response_times": [
+        0.961875,
+        -0.38812500000000005,
+        0.5231249999999985
+      ],
+      "speaker_balance": 0.2030456852791876
+    },
+    "audio_quality": {
+      "snr_db": 98.48710632324219,
+      "spectral_centroid": 844.6296425345425,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.7099862388678198,
+      "turns": 0.681218274111675,
+      "quality": 1.0,
+      "interaction": 0.6666666666666666
+    }
+  },
+  {
+    "recording_id": "f460992a331c88841e6afc51fca7195f",
+    "duration": 9.72,
+    "conversation_detected": true,
+    "conversation_confidence": 0.7719512195121951,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 6.226875000000002,
+    "receiver_speech_duration": 1.3668750000000003,
+    "turn_taking": {
+      "total_turns": 4,
+      "turn_switches": 4,
+      "avg_turn_duration": 0.7551562500000006,
+      "turn_rate": 0.43977186834329685,
+      "overlap_ratio": 0.10946196660482373,
+      "response_times": [
+        2.2275,
+        -0.9281250000000005,
+        0.2699999999999996,
+        -4.590000000000002
+      ],
+      "speaker_balance": 0.2195121951219512
+    },
+    "audio_quality": {
+      "snr_db": 104.88697814941406,
+      "spectral_centroid": 599.4812268729471,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.6878048780487804,
+      "quality": 1.0,
+      "interaction": 0.25
+    }
+  },
+  {
+    "recording_id": "e7ba130720e078fd46f26e891f13195e",
+    "duration": 16.77975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.49341013824884794,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 3.661874999999999,
+    "receiver_speech_duration": 1.4849999999999988,
+    "turn_taking": {
+      "total_turns": 7,
+      "turn_switches": 7,
+      "avg_turn_duration": -0.8172321428571429,
+      "turn_rate": 0.44555834029518243,
+      "overlap_ratio": 0.06229860365198713,
+      "response_times": [
+        1.771875,
+        -0.54,
+        1.6706250000000002,
+        -0.23625000000000007,
+        2.9193750000000023,
+        -1.0968750000000007,
+        1.2318749999999987
+      ],
+      "speaker_balance": 0.4055299539170505
+    },
+    "audio_quality": {
+      "snr_db": 93.44357299804688,
+      "spectral_centroid": 30.361006311139906,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.7622119815668202,
+      "quality": 1.0,
+      "interaction": 0.5142857142857142
+    }
+  },
+  {
+    "recording_id": "47009e0358e1707bd3b034beae02195l",
+    "duration": 16.63975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.7894771241830065,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0.9787499999999985,
+    "receiver_speech_duration": 10.327500000000002,
+    "turn_taking": {
+      "total_turns": 5,
+      "turn_switches": 5,
+      "avg_turn_duration": -0.17549999999999982,
+      "turn_rate": 0.3527336860670193,
+      "overlap_ratio": 0.06904761904761893,
+      "response_times": [
+        -0.32062500000000016,
+        1.9912500000000009,
+        -0.6412500000000012,
+        0.6412499999999994,
+        -0.7931249999999999
+      ],
+      "speaker_balance": 0.09477124183006519
+    },
+    "audio_quality": {
+      "snr_db": 100.45570373535156,
+      "spectral_centroid": 967.9749818859275,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.6379084967320261,
+      "quality": 1.0,
+      "interaction": 0.4
+    }
+  },
+  {
+    "recording_id": "b0e5a4210458b8b9961bdcf2a6ad195e",
+    "duration": 11.57975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.4069723439625208,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 2.193749999999999,
+    "receiver_speech_duration": 0.8268750000000002,
+    "turn_taking": {
+      "total_turns": 1,
+      "turn_switches": 1,
+      "avg_turn_duration": 0.7931250000000003,
+      "turn_rate": 0.2270469703419895,
+      "overlap_ratio": 0.1800766283524905,
+      "response_times": [
+        -0.7931250000000003
+      ],
+      "speaker_balance": 0.3769230769230772
+    },
+    "audio_quality": {
+      "snr_db": 92.85874938964844,
+      "spectral_centroid": 910.6755732471136,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.5913495541786309,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "bfb2c7f8fdf69e24845a25cfd056195e",
+    "duration": 15.25975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.31000000000000005,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 2.278125000000001,
+    "receiver_speech_duration": 1.3668750000000007,
+    "turn_taking": {
+      "total_turns": 5,
+      "turn_switches": 5,
+      "avg_turn_duration": -1.717875,
+      "turn_rate": 0.3722315280104225,
+      "overlap_ratio": 0.045226130653266326,
+      "response_times": [
+        3.0375,
+        -1.6031249999999986,
+        4.82625,
+        -0.20250000000000057,
+        2.53125
+      ],
+      "speaker_balance": 0.6000000000000001
+    },
+    "audio_quality": {
+      "snr_db": 93.1643295288086,
+      "spectral_centroid": 23.57462337778781,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.8400000000000001,
+      "quality": 0.5,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "e872d26b95ad710335d087766352195f",
+    "duration": 8.76,
+    "conversation_detected": true,
+    "conversation_confidence": 0.9612916184842553,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 1.2993750000000013,
+    "receiver_speech_duration": 0.995625,
+    "turn_taking": {
+      "total_turns": 2,
+      "turn_switches": 2,
+      "avg_turn_duration": -0.32062499999999994,
+      "turn_rate": 0.4058853373921867,
+      "overlap_ratio": 0.08561643835616438,
+      "response_times": [
+        1.0631249999999999,
+        -0.421875
+      ],
+      "speaker_balance": 0.7662337662337655
+    },
+    "audio_quality": {
+      "snr_db": 87.91886138916016,
+      "spectral_centroid": 1087.0678673510035,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.8265210816580677,
+      "turns": 0.9064935064935062,
+      "quality": 1.0,
+      "interaction": 0.6
+    }
+  },
+  {
+    "recording_id": "789b9a0ee216e07d21a847475bf8195d",
+    "duration": 502.13975,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 227.35687499999963,
+    "receiver_speech_duration": 215.61187500000017,
+    "turn_taking": {
+      "total_turns": 137,
+      "turn_switches": 137,
+      "avg_turn_duration": 0.4274178832116793,
+      "turn_rate": 0.27630925459528005,
+      "overlap_ratio": 0.07259546661221122,
+      "response_times": [
+        0.725625,
+        0.6581250000000001,
+        -3.2231250000000005,
+        -0.08437500000000142,
+        0.7256250000000009,
+        0.30375000000000085,
+        -8.488125,
+        -0.6074999999999982,
+        -1.2993749999999977,
+        -1.0293749999999946,
+        0.45562500000000483,
+        -0.06750000000000256,
+        0.7931250000000034,
+        0.7424999999999997,
+        -0.06750000000000256,
+        0.134999999999998,
+        -1.2318750000000023,
+        0.7593749999999915,
+        -0.5231249999999932,
+        -0.05062499999999659,
+        -0.3375000000000057,
+        -2.7168750000000017,
+        0.6581249999999983,
+        -0.08437499999999432,
+        -4.066874999999996,
+        -0.3206249999999926,
+        0.9618750000000063,
+        0.06750000000000966,
+        -3.4087499999999977,
+        -0.21937499999999943,
+        1.7549999999999955,
+        -0.20250000000000057,
+        0.20250000000000057,
+        -0.9449999999999932,
+        0.5568749999999909,
+        -0.421875,
+        0.7087500000000091,
+        0.6581250000000125,
+        1.130625000000009,
+        -0.4556249999999977,
+        0.6412500000000136,
+        -2.8687500000000057,
+        0.43874999999999886,
+        -2.362499999999983,
+        0.725625000000008,
+        0.21937499999998522,
+        1.3331249999999955,
+        0.84375,
+        1.130625000000009,
+        0.539999999999992,
+        -0.3206249999999784,
+        -4.37062499999999,
+        0.21937500000001364,
+        -0.7931250000000034,
+        -0.9956250000000182,
+        0.6074999999999875,
+        -1.974375000000009,
+        -0.25312499999998295,
+        0.6581250000000125,
+        0.06749999999999545,
+        0.7931250000000034,
+        0.8606249999999989,
+        1.0293749999999875,
+        -3.7462500000000034,
+        0.4556249999999977,
+        -5.079374999999999,
+        0.21937499999998522,
+        0.7931250000000034,
+        -1.0462499999999864,
+        -0.05062499999996817,
+        0.6581249999999841,
+        -0.7762499999999477,
+        -4.083750000000009,
+        -0.5400000000000205,
+        -1.9068750000000136,
+        0.6750000000000114,
+        -0.23624999999998408,
+        0.35437500000000455,
+        0.7087500000000091,
+        -2.193749999999966,
+        1.0124999999999886,
+        0.4387500000000273,
+        -0.9787499999999909,
+        -1.2993749999999977,
+        0.2868750000000091,
+        -1.4850000000000136,
+        -1.7550000000000523,
+        -4.758749999999964,
+        0.21937500000001364,
+        -0.8774999999999977,
+        0.33749999999997726,
+        -0.5568749999999909,
+        0.7931250000000318,
+        -0.18562500000001592,
+        -2.2781250000000455,
+        0.371249999999975,
+        1.0968750000000114,
+        -2.5481250000000273,
+        0.4556249999999977,
+        -2.8012500000000387,
+        -1.501874999999984,
+        -0.8268750000000296,
+        0.84375,
+        0.6412500000000136,
+        1.0462499999999864,
+        0.5906250000000455,
+        1.4681249999999864,
+        -3.3918750000000273,
+        0.2868750000000091,
+        0.5231249999999932,
+        -0.1349999999999909,
+        -1.181250000000034,
+        0.6749999999999545,
+        0.5399999999999636,
+        0.421875,
+        -3.088124999999991,
+        0.4556249999999977,
+        -2.9193750000000023,
+        0.35437500000000455,
+        0.472500000000025,
+        1.8899999999999864,
+        -0.2868750000000091,
+        -0.472500000000025,
+        -3.3918749999999704,
+        -0.2025000000000432,
+        1.029374999999959,
+        0.7087500000000091,
+        -0.3881250000000023,
+        -4.252499999999998,
+        0.033749999999997726,
+        1.0124999999999886,
+        -0.30374999999997954,
+        0.9956250000000182,
+        0.5399999999999636,
+        -0.21937500000001364,
+        0.6918750000000387,
+        0.7762500000000045
+      ],
+      "speaker_balance": 0.9483411266978424
+    },
+    "audio_quality": {
+      "snr_db": 105.07600402832031,
+      "spectral_centroid": 545.4106358113315,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.979336450679137,
+      "quality": 1.0,
+      "interaction": 0.5956204379562043
+    }
+  },
+  {
+    "recording_id": "dd990e1046292a3be5eb4b57ab85195q",
+    "duration": 211.42,
+    "conversation_detected": true,
+    "conversation_confidence": 1.0,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 97.36875000000002,
+    "receiver_speech_duration": 118.58062500000008,
+    "turn_taking": {
+      "total_turns": 54,
+      "turn_switches": 54,
+      "avg_turn_duration": 1.1246875000000012,
+      "turn_rate": 0.2569043031470777,
+      "overlap_ratio": 0.15936095054592184,
+      "response_times": [
+        0.5568750000000002,
+        -3.0206250000000003,
+        -1.0631249999999994,
+        0.35437499999999744,
+        -2.953125,
+        -1.4343750000000028,
+        0.3881249999999987,
+        -5.838750000000001,
+        -0.067499999999999,
+        -0.08437500000000142,
+        -3.8643750000000026,
+        -0.08437500000000142,
+        -1.4512500000000017,
+        -0.9450000000000003,
+        1.265625,
+        -1.5862499999999997,
+        0.9281250000000014,
+        1.1981250000000045,
+        -8.302499999999995,
+        -3.391874999999999,
+        0.35437500000000455,
+        -0.8774999999999977,
+        0.269999999999996,
+        0.016874999999998863,
+        -3.914999999999992,
+        0.20250000000000057,
+        -2.4468750000000057,
+        3.358125000000001,
+        -6.496874999999989,
+        0.21937499999999943,
+        -0.5231249999999932,
+        -2.5987499999999955,
+        -3.7631250000000023,
+        0.5231249999999932,
+        -1.0631250000000136,
+        -3.780000000000001,
+        0.11812499999999204,
+        -1.2150000000000034,
+        -0.84375,
+        0.21937500000001364,
+        -0.9787500000000193,
+        1.4681249999999864,
+        -1.3668750000000216,
+        0.9281249999999943,
+        0.2699999999999818,
+        -1.3499999999999943,
+        0.21937500000001364,
+        -3.813749999999999,
+        -2.0756250000000023,
+        0.2868750000000091,
+        -5.703750000000014,
+        0.33749999999997726,
+        1.7043749999999989,
+        0.9787500000000193
+      ],
+      "speaker_balance": 0.8211185427636256
+    },
+    "audio_quality": {
+      "snr_db": 108.52203369140625,
+      "spectral_centroid": 992.5745949043743,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 1.0,
+      "turns": 0.9284474171054502,
+      "quality": 1.0,
+      "interaction": 0.4666666666666667
+    }
+  },
+  {
+    "recording_id": "d4e7601d48f5d21efb8dd84f52d1195q",
+    "duration": 5.69975,
+    "conversation_detected": true,
+    "conversation_confidence": 0.8666953442158774,
+    "caller_has_speech": true,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0.3881250000000005,
+    "receiver_speech_duration": 0.607499999999999,
+    "turn_taking": {
+      "total_turns": 2,
+      "turn_switches": 2,
+      "avg_turn_duration": -1.6875000000000002,
+      "turn_rate": 0.45760045760045753,
+      "overlap_ratio": 0.0,
+      "response_times": [
+        2.9025000000000003,
+        0.47250000000000014
+      ],
+      "speaker_balance": 0.6388888888888907
+    },
+    "audio_quality": {
+      "snr_db": 99.32325744628906,
+      "spectral_centroid": 895.4600570675742,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.6278835329034909,
+      "turns": 0.8555555555555563,
+      "quality": 1.0,
+      "interaction": 0.6
+    }
+  },
+  {
+    "recording_id": "1d30d74bb57d4119462b4f42543c195q",
+    "duration": 7.27975,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0,
+    "receiver_speech_duration": 1.7550000000000014,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 88.52987670898438,
+      "spectral_centroid": 48.43233285981381,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  },
+  {
+    "recording_id": "0dfe2bff6fa2964629c075a6f0ec195i",
+    "duration": 11.38,
+    "conversation_detected": false,
+    "conversation_confidence": 0.2,
+    "caller_has_speech": false,
+    "receiver_has_speech": true,
+    "caller_speech_duration": 0,
+    "receiver_speech_duration": 1.4006250000000007,
+    "turn_taking": {
+      "total_turns": 0,
+      "turn_switches": 0,
+      "avg_turn_duration": 0.0,
+      "turn_rate": 0.0,
+      "overlap_ratio": 0.0,
+      "response_times": [],
+      "speaker_balance": 0.0
+    },
+    "audio_quality": {
+      "snr_db": 91.57105255126953,
+      "spectral_centroid": 31.742067517737944,
+      "dynamic_range": 0.0
+    },
+    "is_mono": false,
+    "detection_scores": {
+      "speech": 0.0,
+      "turns": 0.0,
+      "quality": 1.0,
+      "interaction": 0.0
+    }
+  }
+]

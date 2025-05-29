@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 # Add current directory to path for imports
 sys.path.append(str(Path(__file__).parent))
 
-from conversation_detector import ConversationDetector
+from main import ConversationDetector
 from config import ConversationDetectionConfig
 
 
@@ -121,14 +121,21 @@ def main():
     print(f"🎯 Testing with {args.samples} sample(s)")
 
     # Configure for quick test
-    config = ConversationDetectionConfig(
-        input_recordings_dir=str(recordings_dir),
-        output_dir=args.output,
-        max_workers=2,  # Reduced for testing
-        conversation_detection_threshold=0.65,
-        min_conversation_duration=3.0,  # Reduced for testing
-        huggingface_token=token,
-    )
+    config = ConversationDetectionConfig()
+
+    # Update paths
+    config.paths.input_recordings_dir = str(recordings_dir)
+    config.paths.output_dir = args.output
+
+    # Update processing config
+    config.processing.max_workers = 2  # Reduced for testing
+
+    # Update detection parameters
+    config.detection.conversation_detection_threshold = 0.65
+    config.detection.min_conversation_duration = 3.0  # Reduced for testing
+
+    # Set token
+    config.huggingface_token = token
 
     try:
         # Initialize detector
@@ -165,7 +172,7 @@ def main():
             )
             print(f"{'Confidence:':<15} {confidence}")
             print(f"{'Duration:':<15} {duration}")
-            print(f"{'Turns:':<15} {analysis.turn_taking_analysis['total_turns']}")
+            print(f"{'Turns:':<15} {analysis.turn_taking_analysis.total_turns}")
 
             # Channel details
             for channel in ["Caller", "Receiver"]:
@@ -194,7 +201,7 @@ def main():
             print(f"{'Accuracy:':<15} {metrics.accuracy:.1%}")
             print(f"{'Total samples:':<15} {metrics.total_samples}")
 
-        print(f"\n📁 Detailed results saved to: {config.output_dir}")
+        print(f"\n📁 Detailed results saved to: {config.paths.output_dir}")
         print("\n🎉 Quick test completed successfully!")
         print("\nTo run the full analysis:")
         print(
